@@ -1,38 +1,52 @@
-
 <?php
 /* Template Name: Front Page */
 get_header(); 
 ?>
 
-<div class="homepage-content">
-  <?php
-  // Display the content of the static page set as homepage
-  if (have_posts()) :
-    while (have_posts()) : the_post();
-      the_content();
-    endwhile;
-  endif;
-  ?>
+<div class="year-filter">
+    <h3>Select Year:</h3>
+    <ul>
+        <?php for ($year = 2008; $year <= 2024; $year++): ?>
+            <li>
+                <a href="#" class="year-link" data-year="<?php echo esc_attr($year); ?>">
+                    <?php echo esc_html($year); ?>
+                </a>
+            </li>
+        <?php endfor; ?>
+    </ul>
 </div>
-<?php
-// In your theme's template file (e.g., page.php or a custom template)
-$args = array(
-    'post_type' => 'custom_info',
-    'posts_per_page' => -1,
-);
-$query = new WP_Query($args);
 
-if ($query->have_posts()) {
-    while ($query->have_posts()) {
-        $query->the_post();
-        echo '<h2>' . get_the_title() . '</h2>';
-        echo '<div>' . get_the_content() . '</div>';
-        echo '<p>Time: ' . get_post_meta(get_the_ID(), 'time', true) . '</p>'; // Custom field for time
-        echo '<p>Category: ' . get_the_terms(get_the_ID(), 'custom_category')[0]->name . '</p>'; // Custom taxonomy
-    }
-} else {
-    echo 'No Custom Info found.';
-}
-wp_reset_postdata();
+<div id="event-list">
+    <!-- Events will be loaded here via AJAX -->
+</div>
 
-get_footer(); ?>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+    const yearLinks = document.querySelectorAll(".year-link");
+
+    yearLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const year = this.getAttribute("data-year");
+
+            // Send AJAX request
+            fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({
+                    action: "filter_events",
+                    year: year
+                })
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("event-list").innerHTML = data;
+            })
+            .catch(error => console.error("Error:", error));
+        });
+    });
+});
+</script>
+
+<?php get_footer(); ?>

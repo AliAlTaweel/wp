@@ -1,4 +1,20 @@
-/**
-Theme Name : MC
-Author : AA
-*/
+.home{
+    background-color: rgb(248, 244, 244);
+}
+.year-filter {
+    margin-bottom: 20px;
+}
+
+.year-filter ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.year-filter li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.events {
+    margin-top: 20px;
+}
