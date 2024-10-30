@@ -18,3 +18,89 @@
 .events {
     margin-top: 20px;
 }
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.event-table th, .event-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+.event-table th {
+    background-color: #f2f2f2; /* Light grey background for the header */
+    color: #333; /* Darker text color for header */
+}
+
+.event-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light background for even rows */
+}
+
+.event-table tr:hover {
+    background-color: #eaeaea; /* Highlight row on hover */
+}
+
+.event-table td {
+    vertical-align: top; /* Align text to the top of the cell */
+}
+
+.year-filter {
+    margin-bottom: 20px; /* Add space below the year filter */
+}
+
+.year-filter ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.year-filter li {
+    display: inline; /* Display years in a line */
+    margin-right: 15px; /* Space between years */
+}
+
+.year-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #0073aa; /* Change link color */
+}
+
+.year-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+#place-list {
+    margin: 20px 0; /* Adds some space above and below the places list */
+}
+
+#place-list h3 {
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+#place-list ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allows wrapping to the next line if needed */
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+}
+
+#place-list li {
+    margin-right: 15px; /* Adds space between each place item */
+    margin-bottom: 10px; /* Adds space below each item for wrapping */
+    padding: 10px;
+}
+
+#place-list a {
+    text-decoration: none; /* Removes underline from links */
+    color: #0073aa; /* Link color */
+    padding: 10px 15px; /* Adds padding around the link */
+    border: 1px solid #0073aa; /* Adds a border */
+    border-radius: 5px; /* Rounds the corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#place-list a:hover {
+    background-color: #0073aa; /* Changes background color on hover */
+    color: white; /* Changes text color on hover */
+}
