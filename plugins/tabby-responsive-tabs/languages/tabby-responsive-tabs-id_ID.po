@@ -1,0 +1,397 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tabby Responsive Tabs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 12:15+0000\n"
+"PO-Revision-Date: 2022-04-10 20:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.0; wp-5.9.2\n"
+"X-Domain: tabby-responsive-tabs"
+
+#: includes/admin.php:165
+msgid ""
+"A collection of one-click presets can be used as an easy starting point for "
+"further customisation."
+msgstr ""
+"Kumpulan preset sekali klik dapat digunakan sebagai titik awal yang mudah "
+"untuk penyesuaian lebih lanjut."
+
+#: includes/admin.php:212
+msgid "A custom plugin specifically for your site"
+msgstr "Plugin khusus untuk situs Anda"
+
+#: includes/admin.php:184
+#| msgid ""
+#| "A tab can be specified within a 'tabby responsive tabs' tabgroup so that "
+#| "it opens a link to any URL."
+msgid ""
+"A tab can be specified within a tabby responsive tabs tabgroup so that it "
+"opens a link to any URL."
+msgstr ""
+"Tab dapat ditentukan dalam grup tab tabby responsive tabs sehingga membuka "
+"tautan ke URL apa pun."
+
+#: includes/admin.php:164
+msgid ""
+"All customisations are made using a simple point & click interface without "
+"the need to edit any code."
+msgstr ""
+"Semua penyesuaian dibuat menggunakan antarmuka titik & klik sederhana tanpa "
+"perlu mengedit kode apa pun."
+
+#: includes/admin.php:115
+msgid ""
+"Alternatively the optional 'Tabby responsive tabs customiser' add-on can be "
+"used to customise the tab design without any code editing."
+msgstr ""
+"Sebagai alternatif, add-on 'Tabby responsive tabs customiser' opsional dapat "
+"digunakan untuk menyesuaikan desain tab tanpa mengedit kode apa pun."
+
+#: includes/admin.php:193
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' that keeps all sections of the "
+#| "accordion closed on page load."
+msgid ""
+"An add-on for tabby responsive tabs that keeps all sections of the accordion "
+"closed on page load."
+msgstr ""
+"Add-on untuk tabby responsive tabs yang membuat semua bagian akordeon tetap "
+"tertutup saat memuat halaman."
+
+#: includes/admin.php:203
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' to keep the currently active tab "
+#| "open after a reload."
+msgid ""
+"An add-on for tabby responsive tabs to keep the currently active tab open "
+"after a reload."
+msgstr ""
+"Add-on untuk tabby responsive tabs agar tab yang sedang aktif tetap terbuka "
+"setelah memuat ulang."
+
+#: includes/admin.php:173
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which adds a '[tabbylink]' "
+#| "shortcode."
+msgid "An add-on for tabby responsive tabs which adds a [tabbylink] shortcode."
+msgstr ""
+"Pengaya untuk tabby responsive tabs yang menambahkan kode pendek [tabbylink]."
+
+#: includes/admin.php:163
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which allows you to easily "
+#| "customise your tabs."
+msgid ""
+"An add-on for tabby responsive tabs which allows you to easily customise "
+"your tabs."
+msgstr ""
+"Add-on untuk tabby responsive tabs yang memungkinkan Anda menyesuaikan tab "
+"dengan mudah."
+
+#: includes/admin.php:183
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which enables a tab to act as a "
+#| "link to any URL."
+msgid ""
+"An add-on for tabby responsive tabs which enables a tab to act as a link to "
+"any URL."
+msgstr ""
+"Pengaya untuk tabby responsive tabs yang memungkinkan tab bertindak sebagai "
+"tautan ke URL apa pun."
+
+#. translators: Developer name: cubecolour
+#: includes/admin.php:59
+msgid "by %1$s"
+msgstr "oleh %1$s"
+
+#. Description of the plugin
+msgid ""
+"Create responsive tabs inside your posts, pages or custom post types by "
+"adding simple shortcodes."
+msgstr ""
+"Buat tab responsif di dalam posting, halaman, atau jenis posting khusus Anda "
+"dengan menambahkan kode pendek sederhana."
+
+#. Author of the plugin
+msgid "cubecolour"
+msgstr "cubecolour"
+
+#: tabby-responsive-tabs.php:99
+msgid "Cubecolour on twitter"
+msgstr "Cubecolour di twitter"
+
+#: includes/admin.php:211
+msgid "Custom styles or functionality"
+msgstr "Gaya atau fungsionalitas khusus"
+
+#: includes/admin.php:65
+msgid "Default stylesheet"
+msgstr "Lembar gaya default"
+
+#: tabby-responsive-tabs.php:97
+msgid "Donate"
+msgstr "Menyumbangkan"
+
+#: includes/admin.php:96
+msgid "Font Awesome icon style"
+msgstr ""
+"\n"
+"\n"
+"Gaya ikon Font Awesome"
+
+#. Author URI of the plugin
+msgid "https://cubecolour.co.uk"
+msgstr "https://cubecolour.co.uk"
+
+#. Plugin URI of the plugin
+msgid "https://cubecolour.co.uk/tabby-responsive-tabs"
+msgstr "https://cubecolour.co.uk/tabby-responsive-tabs"
+
+#. translators: Link to the developer website, link to the reviews page
+#: includes/admin.php:120
+#| msgid ""
+#| "If this plugin or has provided you with some value, or it has saved you "
+#| "some development time, please consider purchasing an add-on, or making a "
+#| "contribution to %1$sthe developer%2$s, and also consider writing a brief "
+#| "%3$sreview%2$s of the plugin."
+msgid ""
+"If this plugin or has provided you with some value, or it has saved you some "
+"development time, please consider purchasing an add-on, or making a "
+"contribution to %1$sthe developer%2$s, and writing a brief %3$sreview%2$s of "
+"the plugin."
+msgstr ""
+"Jika plugin ini atau telah memberi Anda beberapa nilai, atau telah menghemat "
+"waktu pengembangan Anda, harap pertimbangkan untuk membeli add-on, atau "
+"memberikan kontribusi kepada %1$spengembang%2$s, dan menulis %3$singkat "
+"sreview%2$s dari plugin."
+
+#: includes/admin.php:66
+#| msgid ""
+#| "If you are using a custom set of 'tabby' styles in your child theme or "
+#| "elsewhere, uncheck the checkbox below to remove the default 'tabby' "
+#| "stylesheet."
+msgid ""
+"If you are using a custom set of tabby styles in your child theme or "
+"elsewhere, uncheck the checkbox below to remove the default tabby stylesheet."
+msgstr ""
+"Jika Anda menggunakan kumpulan gaya tabby khusus di tema anak Anda atau di "
+"tempat lain, hapus centang pada kotak di bawah untuk menghapus lembar gaya "
+"tabby default."
+
+#. translators: Link to the official font awesome plugin on WordPress.org
+#: includes/admin.php:68
+msgid ""
+"If you are using the official %1$sfont awesome plugin%2$s to add icon "
+"support, you can choose the icon style to be used in tab titles. Only "
+"regular and solid icons are available in font awesome free."
+msgstr ""
+"Jika Anda menggunakan %1$sFont Awesome plugin%2$s resmi untuk menambahkan "
+"dukungan ikon, Anda dapat memilih gaya ikon yang akan digunakan dalam judul "
+"tab. Hanya ikon biasa dan solid yang tersedia dalam font gratis yang "
+"mengagumkan."
+
+#. translators: <pre> tags
+#: includes/admin.php:132
+msgid ""
+"If you copy & paste the following shortcodes into your visual editor, be "
+"sure to delete any %1$s tags surrounding the content."
+msgstr ""
+"Jika Anda menyalin & menempelkan kode pendek berikut ke editor visual Anda, "
+"pastikan untuk menghapus tag %1$s yang mengelilingi konten."
+
+#: includes/admin.php:79
+#| msgid "Include the default 'tabby' stylesheet:"
+msgid "Include the default tabby stylesheet:"
+msgstr "Sertakan lembar gaya tabby default:"
+
+#: includes/admin.php:130
+msgid ""
+"It is recommended to leave a blank line between each shortcode and block of "
+"content."
+msgstr ""
+"Disarankan untuk meninggalkan baris kosong di antara setiap kode pendek dan "
+"blok konten."
+
+#. translators: Link to the plugin's readme.txt file, link to the plugin's page on WordPress.org
+#: includes/admin.php:155
+msgid ""
+"Please refer to the plugin's %1$sreadme file%2$s or the WordPress.org "
+"%3$splugin page%4$s for more information."
+msgstr ""
+"Silakan merujuk ke plugin %1$sreadme file%2$s atau halaman plugin %3$s "
+"WordPress.org%4$s untuk informasi lebih lanjut."
+
+#. translators: Link to the plugin's support forum on WordPress.org
+#: includes/admin.php:157
+#| msgid ""
+#| "Plugin support on WordPress.org: %1$s'tabby responsive tabs' support "
+#| "forum%2$s."
+msgid ""
+"Plugin support on WordPress.org: %1$stabby responsive tabs support forum%2$s."
+msgstr ""
+"Dukungan plugin di WordPress.org: %1$s'forum dukungan tabby responsive "
+"tabs%2$s."
+
+#: includes/admin.php:126
+msgid "Plugin usage"
+msgstr "Penggunaan plugin"
+
+#: includes/admin.php:168 includes/admin.php:178 includes/admin.php:188
+#: includes/admin.php:198 includes/admin.php:207
+msgid "Purchase add-on"
+msgstr "Beli tambahan"
+
+#: includes/admin.php:216
+msgid "Request quote"
+msgstr "Minta penawaran"
+
+#: tabby-responsive-tabs.php:98
+msgid "Review"
+msgstr "Tinjauan"
+
+#: tabby-responsive-tabs.php:100
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: tabby-responsive-tabs.php:96
+msgid "Support"
+msgstr "Mendukung"
+
+#: includes/admin.php:83
+msgid "Tab title element (default: H2)"
+msgstr "Elemen judul tab (default: H2)"
+
+#. Plugin Name of the plugin
+msgid "Tabby Responsive Tabs"
+msgstr "Tabby Responsive Tabs"
+
+#: includes/admin.php:118
+msgid "Thank you!"
+msgstr "Terima kasih!"
+
+#: includes/admin.php:195
+msgid "The tab display (desktop view) is unaffected."
+msgstr "Tampilan tab (tampilan desktop) tidak terpengaruh."
+
+#: includes/admin.php:129
+#| msgid ""
+#| "The title parameter sets the text on the tab, the content is added "
+#| "between the shortcodes, and the '[tabbyending]' shortcode is used once "
+#| "per tabgroup and must be placed after the last tab's content."
+msgid ""
+"The title parameter sets the text on the tab, the content is added between "
+"the shortcodes, and the [tabbyending] shortcode is used once per tabgroup "
+"and must be placed after the last tab's content."
+msgstr ""
+"Parameter judul menyetel teks pada tab, konten ditambahkan di antara kode "
+"pendek, dan kode pendek [tabbyending] digunakan sekali per grup tab dan "
+"harus ditempatkan setelah konten tab terakhir."
+
+#. translators: [tabby],[tabbyending]
+#: includes/admin.php:128
+msgid ""
+"There are two shortcodes which should both be used, %1$s and %2$s. These are "
+"added in the visual or text editor, or within a shortcode block in the block "
+"editor."
+msgstr ""
+"Ada dua kode pendek yang harus digunakan, %1$s dan %2$s. Ini ditambahkan di "
+"editor visual atau teks, atau di dalam blok kode pendek di editor blok."
+
+#: includes/admin.php:185
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby link to "
+"tab' add-on as each one has a different purpose."
+msgstr ""
+"Add-on ini jangan disamakan dengan add-on 'Tabby link to tab' karena masing-"
+"masing memiliki tujuan yang berbeda."
+
+#: includes/admin.php:175
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby tab to "
+"url link' add-on as each one has a different purpose."
+msgstr ""
+"Add-on ini tidak sama dengan add-on 'Tabby tab to url link' karena masing-"
+"masing memiliki tujuan yang berbeda."
+
+#: includes/admin.php:194
+msgid ""
+"This changes the default behaviour for the accordion so no tab content is "
+"shown when the page is initially loaded."
+msgstr ""
+"Ini mengubah perilaku default untuk akordeon sehingga tidak ada konten tab "
+"yang ditampilkan saat halaman pertama kali dimuat."
+
+#: includes/admin.php:204
+#| msgid ""
+#| "This enables the currently active tab in a 'tabby responsive tabs' "
+#| "tabgroup to remain the active (open) tab after the page has been "
+#| "reloaded/refreshed."
+msgid ""
+"This enables the currently active tab in a tabby responsive tabs tabgroup to "
+"remain the active (open) tab after the page has been reloaded/refreshed."
+msgstr ""
+"Ini memungkinkan tab yang saat ini aktif di grup tab tabby responsive tabs "
+"untuk tetap menjadi tab aktif (terbuka) setelah halaman dimuat "
+"ulang/direfresh."
+
+#: includes/admin.php:213
+msgid ""
+"This is a bespoke service to provide a custom-made add-on plugin to extend "
+"tabby responsive tabs or load a custom tabs stylesheet created to meet your "
+"exact requirements."
+msgstr ""
+"Ini adalah layanan yang dipesan lebih dahulu untuk menyediakan plugin "
+"tambahan yang dibuat khusus untuk memperluas tab responsif tabby atau memuat "
+"lembar gaya tab khusus yang dibuat untuk memenuhi kebutuhan Anda."
+
+#: includes/admin.php:138
+msgid "This is the content of the first tab."
+msgstr "Ini adalah isi dari tab pertama."
+
+#: includes/admin.php:143
+msgid "This is the content of the second tab."
+msgstr "Ini adalah isi dari tab kedua."
+
+#: includes/admin.php:148
+msgid "This is the content of the third tab."
+msgstr "Ini adalah isi dari tab ketiga."
+
+#: includes/admin.php:174
+msgid ""
+"This shortcode creates a link to a tab on the same page, where selecting the "
+"link does not cause the page to reload."
+msgstr ""
+"Kode pendek ini membuat tautan ke tab di halaman yang sama, di mana memilih "
+"tautan tidak menyebabkan halaman dimuat ulang."
+
+#: includes/admin.php:110
+msgid "To customise how your tabs display, either:"
+msgstr "Untuk menyesuaikan tampilan tab Anda, baik:"
+
+#. translators: Link to the tabby stylesheet
+#: includes/admin.php:114
+#| msgid ""
+#| "Uncheck the option above, copy the css rules from the %1$stabby "
+#| "stylesheet%2$s into either your child theme's stylesheet or the custom "
+#| "css section of the WordPress customizer, and edit the css there."
+msgid ""
+"Uncheck the option above, copy the css rules from the %1$stabby "
+"stylesheet%2$s into either your child theme's stylesheet or the custom css "
+"section of the WordPress customizer, and make any required edits to that "
+"copy of the css."
+msgstr ""
+"Hapus centang opsi di atas, salin aturan css dari %1$stabby stylesheet%2$s "
+"ke salah satu lembar gaya tema anak Anda atau bagian css kustom dari "
+"penyesuai WordPress, dan lakukan pengeditan yang diperlukan pada salinan css "
+"tersebut."
+
+#: includes/admin.php:53
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Anda tidak memiliki izin yang memadai untuk mengakses halaman ini."

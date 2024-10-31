@@ -1,0 +1,235 @@
+# Copyright (C) 2022 cubecolour
+# This file is distributed under the same license as the Tabby Responsive Tabs plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tabby Responsive Tabs 1.4.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tabby-responsive-tabs\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-04-10T20:13:29+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: tabby-responsive-tabs\n"
+
+#. Plugin Name of the plugin
+msgid "Tabby Responsive Tabs"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://cubecolour.co.uk/tabby-responsive-tabs"
+msgstr ""
+
+#. Description of the plugin
+msgid "Create responsive tabs inside your posts, pages or custom post types by adding simple shortcodes."
+msgstr ""
+
+#. Author of the plugin
+msgid "cubecolour"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://cubecolour.co.uk"
+msgstr ""
+
+#: includes/admin.php:53
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#. translators: Developer name: cubecolour
+#: includes/admin.php:59
+msgid "by %1$s"
+msgstr ""
+
+#: includes/admin.php:65
+msgid "Default stylesheet"
+msgstr ""
+
+#: includes/admin.php:66
+msgid "If you are using a custom set of tabby styles in your child theme or elsewhere, uncheck the checkbox below to remove the default tabby stylesheet."
+msgstr ""
+
+#. translators: Link to the official font awesome plugin on WordPress.org
+#: includes/admin.php:68
+msgid "If you are using the official %1$sfont awesome plugin%2$s to add icon support, you can choose the icon style to be used in tab titles. Only regular and solid icons are available in font awesome free."
+msgstr ""
+
+#: includes/admin.php:79
+msgid "Include the default tabby stylesheet:"
+msgstr ""
+
+#: includes/admin.php:83
+msgid "Tab title element (default: H2)"
+msgstr ""
+
+#: includes/admin.php:96
+msgid "Font Awesome icon style"
+msgstr ""
+
+#: includes/admin.php:110
+msgid "To customise how your tabs display, either:"
+msgstr ""
+
+#. translators: Link to the tabby stylesheet
+#: includes/admin.php:114
+msgid "Uncheck the option above, copy the css rules from the %1$stabby stylesheet%2$s into either your child theme's stylesheet or the custom css section of the WordPress customizer, and make any required edits to that copy of the css."
+msgstr ""
+
+#: includes/admin.php:115
+msgid "Alternatively the optional 'Tabby responsive tabs customiser' add-on can be used to customise the tab design without any code editing."
+msgstr ""
+
+#: includes/admin.php:118
+msgid "Thank you!"
+msgstr ""
+
+#. translators: Link to the developer website, link to the reviews page
+#: includes/admin.php:120
+msgid "If this plugin or has provided you with some value, or it has saved you some development time, please consider purchasing an add-on, or making a contribution to %1$sthe developer%2$s, and writing a brief %3$sreview%2$s of the plugin."
+msgstr ""
+
+#: includes/admin.php:126
+msgid "Plugin usage"
+msgstr ""
+
+#. translators: [tabby],[tabbyending]
+#: includes/admin.php:128
+msgid "There are two shortcodes which should both be used, %1$s and %2$s. These are added in the visual or text editor, or within a shortcode block in the block editor."
+msgstr ""
+
+#: includes/admin.php:129
+msgid "The title parameter sets the text on the tab, the content is added between the shortcodes, and the [tabbyending] shortcode is used once per tabgroup and must be placed after the last tab's content."
+msgstr ""
+
+#: includes/admin.php:130
+msgid "It is recommended to leave a blank line between each shortcode and block of content."
+msgstr ""
+
+#. translators: <pre> tags
+#: includes/admin.php:132
+msgid "If you copy & paste the following shortcodes into your visual editor, be sure to delete any %1$s tags surrounding the content."
+msgstr ""
+
+#: includes/admin.php:138
+msgid "This is the content of the first tab."
+msgstr ""
+
+#: includes/admin.php:143
+msgid "This is the content of the second tab."
+msgstr ""
+
+#: includes/admin.php:148
+msgid "This is the content of the third tab."
+msgstr ""
+
+#. translators: Link to the plugin's readme.txt file, link to the plugin's page on WordPress.org
+#: includes/admin.php:155
+msgid "Please refer to the plugin's %1$sreadme file%2$s or the WordPress.org %3$splugin page%4$s for more information."
+msgstr ""
+
+#. translators: Link to the plugin's support forum on WordPress.org
+#: includes/admin.php:157
+msgid "Plugin support on WordPress.org: %1$stabby responsive tabs support forum%2$s."
+msgstr ""
+
+#: includes/admin.php:163
+msgid "An add-on for tabby responsive tabs which allows you to easily customise your tabs."
+msgstr ""
+
+#: includes/admin.php:164
+msgid "All customisations are made using a simple point & click interface without the need to edit any code."
+msgstr ""
+
+#: includes/admin.php:165
+msgid "A collection of one-click presets can be used as an easy starting point for further customisation."
+msgstr ""
+
+#: includes/admin.php:168
+#: includes/admin.php:178
+#: includes/admin.php:188
+#: includes/admin.php:198
+#: includes/admin.php:207
+msgid "Purchase add-on"
+msgstr ""
+
+#: includes/admin.php:173
+msgid "An add-on for tabby responsive tabs which adds a [tabbylink] shortcode."
+msgstr ""
+
+#: includes/admin.php:174
+msgid "This shortcode creates a link to a tab on the same page, where selecting the link does not cause the page to reload."
+msgstr ""
+
+#: includes/admin.php:175
+msgid "This add-on should not be confused with the similarly named 'Tabby tab to url link' add-on as each one has a different purpose."
+msgstr ""
+
+#: includes/admin.php:183
+msgid "An add-on for tabby responsive tabs which enables a tab to act as a link to any URL."
+msgstr ""
+
+#: includes/admin.php:184
+msgid "A tab can be specified within a tabby responsive tabs tabgroup so that it opens a link to any URL."
+msgstr ""
+
+#: includes/admin.php:185
+msgid "This add-on should not be confused with the similarly named 'Tabby link to tab' add-on as each one has a different purpose."
+msgstr ""
+
+#: includes/admin.php:193
+msgid "An add-on for tabby responsive tabs that keeps all sections of the accordion closed on page load."
+msgstr ""
+
+#: includes/admin.php:194
+msgid "This changes the default behaviour for the accordion so no tab content is shown when the page is initially loaded."
+msgstr ""
+
+#: includes/admin.php:195
+msgid "The tab display (desktop view) is unaffected."
+msgstr ""
+
+#: includes/admin.php:203
+msgid "An add-on for tabby responsive tabs to keep the currently active tab open after a reload."
+msgstr ""
+
+#: includes/admin.php:204
+msgid "This enables the currently active tab in a tabby responsive tabs tabgroup to remain the active (open) tab after the page has been reloaded/refreshed."
+msgstr ""
+
+#: includes/admin.php:211
+msgid "Custom styles or functionality"
+msgstr ""
+
+#: includes/admin.php:212
+msgid "A custom plugin specifically for your site"
+msgstr ""
+
+#: includes/admin.php:213
+msgid "This is a bespoke service to provide a custom-made add-on plugin to extend tabby responsive tabs or load a custom tabs stylesheet created to meet your exact requirements."
+msgstr ""
+
+#: includes/admin.php:216
+msgid "Request quote"
+msgstr ""
+
+#: tabby-responsive-tabs.php:96
+msgid "Support"
+msgstr ""
+
+#: tabby-responsive-tabs.php:97
+msgid "Donate"
+msgstr ""
+
+#: tabby-responsive-tabs.php:98
+msgid "Review"
+msgstr ""
+
+#: tabby-responsive-tabs.php:99
+msgid "Cubecolour on twitter"
+msgstr ""
+
+#: tabby-responsive-tabs.php:100
+msgid "Settings"
+msgstr ""

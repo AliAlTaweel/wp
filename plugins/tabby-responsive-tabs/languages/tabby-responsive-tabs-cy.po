@@ -1,0 +1,395 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tabby Responsive Tabs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 12:15+0000\n"
+"PO-Revision-Date: 2022-04-10 20:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: Welsh\n"
+"Language: cy\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n==3 ? 3 : "
+"n==6 ? 4 : 5;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.0; wp-5.9.2\n"
+"X-Domain: tabby-responsive-tabs"
+
+#: includes/admin.php:165
+msgid ""
+"A collection of one-click presets can be used as an easy starting point for "
+"further customisation."
+msgstr ""
+"Gellir defnyddio casgliad o ragosodiadau un clic fel man cychwyn hawdd ar "
+"gyfer addasu pellach."
+
+#: includes/admin.php:212
+msgid "A custom plugin specifically for your site"
+msgstr "Ategyn wedi'i deilwra'n benodol ar gyfer eich gwefan"
+
+#: includes/admin.php:184
+#| msgid ""
+#| "A tab can be specified within a 'tabby responsive tabs' tabgroup so that "
+#| "it opens a link to any URL."
+msgid ""
+"A tab can be specified within a tabby responsive tabs tabgroup so that it "
+"opens a link to any URL."
+msgstr ""
+"Gellir nodi tab o fewn grŵp tabiau tabby responsive tabs fel ei fod yn agor "
+"dolen i unrhyw URL."
+
+#: includes/admin.php:164
+msgid ""
+"All customisations are made using a simple point & click interface without "
+"the need to edit any code."
+msgstr ""
+"Gwneir pob addasiad gan ddefnyddio rhyngwyneb pwynt a chlicio syml heb fod "
+"angen golygu unrhyw god."
+
+#: includes/admin.php:115
+msgid ""
+"Alternatively the optional 'Tabby responsive tabs customiser' add-on can be "
+"used to customise the tab design without any code editing."
+msgstr ""
+"Fel arall, gellir defnyddio'r ychwanegyn dewisol 'Tabby responsive tabs "
+"customiser' i addasu cynllun y tab heb unrhyw olygu cod."
+
+#: includes/admin.php:193
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' that keeps all sections of the "
+#| "accordion closed on page load."
+msgid ""
+"An add-on for tabby responsive tabs that keeps all sections of the accordion "
+"closed on page load."
+msgstr ""
+"Ychwanegyn ar gyfer tabby responsive tabs sy'n cadw pob rhan o'r acordion ar "
+"gau ar lwyth tudalen."
+
+#: includes/admin.php:203
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' to keep the currently active tab "
+#| "open after a reload."
+msgid ""
+"An add-on for tabby responsive tabs to keep the currently active tab open "
+"after a reload."
+msgstr ""
+"Ychwanegiad ar gyfer tabby responsive tabs i gadw'r tab gweithredol "
+"presennol ar agor ar ôl ail-lwytho."
+
+#: includes/admin.php:173
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which adds a '[tabbylink]' "
+#| "shortcode."
+msgid "An add-on for tabby responsive tabs which adds a [tabbylink] shortcode."
+msgstr ""
+"Ychwanegiad ar gyfer tabby responsive tabs sy'n ychwanegu cod byr [tabbylink]"
+"."
+
+#: includes/admin.php:163
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which allows you to easily "
+#| "customise your tabs."
+msgid ""
+"An add-on for tabby responsive tabs which allows you to easily customise "
+"your tabs."
+msgstr ""
+"Ychwanegiad ar gyfer tabby responsive tabs sy'n eich galluogi i addasu eich "
+"tabiau'n hawdd."
+
+#: includes/admin.php:183
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which enables a tab to act as a "
+#| "link to any URL."
+msgid ""
+"An add-on for tabby responsive tabs which enables a tab to act as a link to "
+"any URL."
+msgstr ""
+"Ychwanegiad ar gyfer tabby responsive tabs sy'n galluogi tab i weithredu fel "
+"dolen i unrhyw URL."
+
+#. translators: Developer name: cubecolour
+#: includes/admin.php:59
+msgid "by %1$s"
+msgstr "gan %1$s"
+
+#. Description of the plugin
+msgid ""
+"Create responsive tabs inside your posts, pages or custom post types by "
+"adding simple shortcodes."
+msgstr ""
+"Creu tabiau ymatebol y tu mewn i'ch postiadau, tudalennau neu fathau o bost "
+"arferol trwy ychwanegu codau byr syml."
+
+#. Author of the plugin
+msgid "cubecolour"
+msgstr "cubecolour"
+
+#: tabby-responsive-tabs.php:99
+msgid "Cubecolour on twitter"
+msgstr "Cubecolour ar twitter"
+
+#: includes/admin.php:211
+msgid "Custom styles or functionality"
+msgstr "Arddulliau neu ymarferoldeb personol"
+
+#: includes/admin.php:65
+msgid "Default stylesheet"
+msgstr "Taflen arddull ddiofyn"
+
+#: tabby-responsive-tabs.php:97
+msgid "Donate"
+msgstr "Rhoddwch"
+
+#: includes/admin.php:96
+msgid "Font Awesome icon style"
+msgstr "Arddull eicon Font Awesome"
+
+#. Author URI of the plugin
+msgid "https://cubecolour.co.uk"
+msgstr "https://cubecolour.co.uk"
+
+#. Plugin URI of the plugin
+msgid "https://cubecolour.co.uk/tabby-responsive-tabs"
+msgstr "https://cubecolour.co.uk/tabby-responsive-tabs"
+
+#. translators: Link to the developer website, link to the reviews page
+#: includes/admin.php:120
+#| msgid ""
+#| "If this plugin or has provided you with some value, or it has saved you "
+#| "some development time, please consider purchasing an add-on, or making a "
+#| "contribution to %1$sthe developer%2$s, and also consider writing a brief "
+#| "%3$sreview%2$s of the plugin."
+msgid ""
+"If this plugin or has provided you with some value, or it has saved you some "
+"development time, please consider purchasing an add-on, or making a "
+"contribution to %1$sthe developer%2$s, and writing a brief %3$sreview%2$s of "
+"the plugin."
+msgstr ""
+"Os yw'r ategyn hwn neu wedi rhoi rhywfaint o werth i chi, neu ei fod wedi "
+"arbed peth amser datblygu i chi, ystyriwch brynu ychwanegyn, neu wneud "
+"cyfraniad i %1$sthe datblygwr%2$s, ac ysgrifennu briff %3$s adolygiad %2$s "
+"o'r ategyn."
+
+#: includes/admin.php:66
+#| msgid ""
+#| "If you are using a custom set of 'tabby' styles in your child theme or "
+#| "elsewhere, uncheck the checkbox below to remove the default 'tabby' "
+#| "stylesheet."
+msgid ""
+"If you are using a custom set of tabby styles in your child theme or "
+"elsewhere, uncheck the checkbox below to remove the default tabby stylesheet."
+msgstr ""
+"Os ydych chi'n defnyddio set o arddulliau tabby wedi'u teilwra yn eich thema "
+"plentyn neu rywle arall, dad-diciwch y blwch ticio isod i gael gwared ar y "
+"ddalen arddull tabby rhagosodedig."
+
+#. translators: Link to the official font awesome plugin on WordPress.org
+#: includes/admin.php:68
+msgid ""
+"If you are using the official %1$sfont awesome plugin%2$s to add icon "
+"support, you can choose the icon style to be used in tab titles. Only "
+"regular and solid icons are available in font awesome free."
+msgstr ""
+"Os ydych yn defnyddio'r ategyn swyddogol %1$sFont Awesome%2$s i ychwanegu "
+"cymorth eicon, gallwch ddewis yr arddull eicon i'w ddefnyddio mewn teitlau "
+"tab. Dim ond eiconau rheolaidd a solet sydd ar gael mewn ffont anhygoel am "
+"ddim."
+
+#. translators: <pre> tags
+#: includes/admin.php:132
+msgid ""
+"If you copy & paste the following shortcodes into your visual editor, be "
+"sure to delete any %1$s tags surrounding the content."
+msgstr ""
+"Os byddwch yn copïo a gludo'r codau byr canlynol i'ch golygydd gweledol, "
+"gwnewch yn siŵr eich bod yn dileu unrhyw dagiau %1$s sy'n amgylchynu'r "
+"cynnwys."
+
+#: includes/admin.php:79
+#| msgid "Include the default 'tabby' stylesheet:"
+msgid "Include the default tabby stylesheet:"
+msgstr "Cynhwyswch y ddalen arddull tabby rhagosodedig:"
+
+#: includes/admin.php:130
+msgid ""
+"It is recommended to leave a blank line between each shortcode and block of "
+"content."
+msgstr "Argymhellir gadael llinell wag rhwng pob cod byr a bloc cynnwys."
+
+#. translators: Link to the plugin's readme.txt file, link to the plugin's page on WordPress.org
+#: includes/admin.php:155
+msgid ""
+"Please refer to the plugin's %1$sreadme file%2$s or the WordPress.org "
+"%3$splugin page%4$s for more information."
+msgstr ""
+"Cyfeiriwch at ffeil %1$sreadme yr ategyn%2$s neu dudalen WordPress.org "
+"%3$splugin%4$s am ragor o wybodaeth."
+
+#. translators: Link to the plugin's support forum on WordPress.org
+#: includes/admin.php:157
+#| msgid ""
+#| "Plugin support on WordPress.org: %1$s'tabby responsive tabs' support "
+#| "forum%2$s."
+msgid ""
+"Plugin support on WordPress.org: %1$stabby responsive tabs support forum%2$s."
+msgstr ""
+"Cefnogaeth ategyn ar WordPress.org: %1$sFforwm cymorth tabby responsive "
+"tabs%2$s."
+
+#: includes/admin.php:126
+msgid "Plugin usage"
+msgstr "Defnydd ategyn"
+
+#: includes/admin.php:168 includes/admin.php:178 includes/admin.php:188
+#: includes/admin.php:198 includes/admin.php:207
+msgid "Purchase add-on"
+msgstr "Prynu ychwanegiad"
+
+#: includes/admin.php:216
+msgid "Request quote"
+msgstr "Cais am ddyfynbris"
+
+#: tabby-responsive-tabs.php:98
+msgid "Review"
+msgstr "Adolygu"
+
+#: tabby-responsive-tabs.php:100
+msgid "Settings"
+msgstr "Gosodiadau"
+
+#: tabby-responsive-tabs.php:96
+msgid "Support"
+msgstr "Cefnogaeth"
+
+#: includes/admin.php:83
+msgid "Tab title element (default: H2)"
+msgstr "Elfen teitl tab (diofyn: H2)"
+
+#. Plugin Name of the plugin
+msgid "Tabby Responsive Tabs"
+msgstr "Tabby Responsive Tabs"
+
+#: includes/admin.php:118
+msgid "Thank you!"
+msgstr "Diolch!"
+
+#: includes/admin.php:195
+msgid "The tab display (desktop view) is unaffected."
+msgstr "Nid yw'r arddangosfa tab (golwg bwrdd gwaith) yn cael ei effeithio."
+
+#: includes/admin.php:129
+#| msgid ""
+#| "The title parameter sets the text on the tab, the content is added "
+#| "between the shortcodes, and the '[tabbyending]' shortcode is used once "
+#| "per tabgroup and must be placed after the last tab's content."
+msgid ""
+"The title parameter sets the text on the tab, the content is added between "
+"the shortcodes, and the [tabbyending] shortcode is used once per tabgroup "
+"and must be placed after the last tab's content."
+msgstr ""
+"Mae'r paramedr teitl yn gosod y testun ar y tab, ychwanegir y cynnwys rhwng "
+"y codau byr, a defnyddir y cod byr [tabbyending] unwaith fesul grŵp tab a "
+"rhaid ei osod ar ôl cynnwys y tab olaf."
+
+#. translators: [tabby],[tabbyending]
+#: includes/admin.php:128
+msgid ""
+"There are two shortcodes which should both be used, %1$s and %2$s. These are "
+"added in the visual or text editor, or within a shortcode block in the block "
+"editor."
+msgstr ""
+"Mae dau god byr y dylid eu defnyddio, %1$s a %2$s. Ychwanegir y rhain yn y "
+"golygydd gweledol neu destun, neu o fewn bloc cod byr yn y golygydd bloc."
+
+#: includes/admin.php:185
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby link to "
+"tab' add-on as each one has a different purpose."
+msgstr ""
+"Ni ddylid drysu rhwng yr ychwanegyn hwn a'r ategyn tebyg o'r enw 'Tabby link "
+"to tab' gan fod gan bob un ddiben gwahanol."
+
+#: includes/admin.php:175
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby tab to "
+"url link' add-on as each one has a different purpose."
+msgstr ""
+"Ni ddylid drysu rhwng yr ychwanegyn hwn a'r ategyn tebyg o'r enw 'Tabby tab "
+"to url link' gan fod gan bob un ddiben gwahanol."
+
+#: includes/admin.php:194
+msgid ""
+"This changes the default behaviour for the accordion so no tab content is "
+"shown when the page is initially loaded."
+msgstr ""
+"Mae hyn yn newid ymddygiad rhagosodedig yr acordion felly ni ddangosir "
+"cynnwys tab pan fydd y dudalen yn cael ei llwytho i ddechrau."
+
+#: includes/admin.php:204
+#| msgid ""
+#| "This enables the currently active tab in a 'tabby responsive tabs' "
+#| "tabgroup to remain the active (open) tab after the page has been "
+#| "reloaded/refreshed."
+msgid ""
+"This enables the currently active tab in a tabby responsive tabs tabgroup to "
+"remain the active (open) tab after the page has been reloaded/refreshed."
+msgstr ""
+"Mae hyn yn galluogi'r tab sy'n weithredol ar hyn o bryd mewn grŵp tabiau "
+"tabby responsive tabs i aros yn dab gweithredol (agored) ar ôl i'r dudalen "
+"gael ei hail-lwytho/adnewyddu."
+
+#: includes/admin.php:213
+msgid ""
+"This is a bespoke service to provide a custom-made add-on plugin to extend "
+"tabby responsive tabs or load a custom tabs stylesheet created to meet your "
+"exact requirements."
+msgstr ""
+"Mae hwn yn wasanaeth pwrpasol i ddarparu ategyn ychwanegu pwrpasol i ymestyn "
+"tabiau ymatebol i dabiau neu lwytho dalen arddull tabiau wedi'i haddasu a "
+"grëwyd i gwrdd â'ch union ofynion."
+
+#: includes/admin.php:138
+msgid "This is the content of the first tab."
+msgstr "Dyma gynnwys y tab cyntaf."
+
+#: includes/admin.php:143
+msgid "This is the content of the second tab."
+msgstr "Dyma gynnwys yr ail dab."
+
+#: includes/admin.php:148
+msgid "This is the content of the third tab."
+msgstr "Dyma gynnwys y trydydd tab."
+
+#: includes/admin.php:174
+msgid ""
+"This shortcode creates a link to a tab on the same page, where selecting the "
+"link does not cause the page to reload."
+msgstr ""
+"Mae'r cod byr hwn yn creu dolen i dab ar yr un dudalen, lle nad yw dewis y "
+"ddolen yn achosi i'r dudalen ail-lwytho."
+
+#: includes/admin.php:110
+msgid "To customise how your tabs display, either:"
+msgstr "I addasu sut mae eich tabiau'n arddangos, naill ai:"
+
+#. translators: Link to the tabby stylesheet
+#: includes/admin.php:114
+#| msgid ""
+#| "Uncheck the option above, copy the css rules from the %1$stabby "
+#| "stylesheet%2$s into either your child theme's stylesheet or the custom "
+#| "css section of the WordPress customizer, and edit the css there."
+msgid ""
+"Uncheck the option above, copy the css rules from the %1$stabby "
+"stylesheet%2$s into either your child theme's stylesheet or the custom css "
+"section of the WordPress customizer, and make any required edits to that "
+"copy of the css."
+msgstr ""
+"Dad-diciwch yr opsiwn uchod, copïwch y rheolau css o'r arddull %1$stabby%2$s "
+"i mewn i naill ai dalen arddull thema eich plentyn neu adran css personol y "
+"customizer WordPress, a gwnewch unrhyw olygiadau gofynnol i'r copi hwnnw o'r "
+"css."
+
+#: includes/admin.php:53
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nid oes gennych ganiatâd digonol i gael mynediad i'r dudalen hon."

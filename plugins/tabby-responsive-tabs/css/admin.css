@@ -1,0 +1,165 @@
+/**
+ * Styles for tabby responsive tabs admin page
+ *
+ */
+.cubecolour:before {
+	display: inline-block;
+	content: '';
+	position: relative;
+	top: 6px;
+	display: inline-block;
+	margin-right: 2px;
+	width: 18px;
+	height: 18px;
+	background-image:url("data:image/svg+xml,%3Csvg width='18' height='18' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e18500' fill-rule='evenodd'%3E%3Cpath transform='rotate(20 9 9)' d='M6.662 6.662H11.337V11.337H6.662z'/%3E%3Cpath d='M0 4.803L13.197 0 18 13.197 4.803 18 0 4.803zm4.33-.473v9.363h9.363V4.33H4.33z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.wrap#tabby {
+	max-width: 1400px;
+}
+
+.tabbyoptions {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax( 420px, 1fr));
+	column-gap: 1.6rem;
+	margin: 0;
+}
+
+.tabbyoptions .card {
+	display: flex;
+	flex-direction: column;
+	background-color: #fcfcfc;
+	display: flex;
+	width: auto;
+	max-width: 100%;
+	display: block;
+}
+
+.tabbyoptions .card h2 {
+	font-size: 2em;
+	line-height: 1.2;
+	height: 2em;
+}
+
+.tabbyoptions .card ul li {
+	padding-left: 1em;
+}
+
+.tabbyoptions .card pre {
+	position: relative;
+	background-color: #fff;
+	padding: 2em 7.5%;
+	margin: 2em 2.5%;
+	background-image: linear-gradient( 0deg, #dfecdc 1.67%, #ffffff 1.67%, #ffffff 5%, #dfecdc 5%, #dfecdc 6.67%, #fff 6.67%, #fff 10%, #dfecdc 10%, #dfecdc 11.67%, #fff 11.67%, #fff 15%, #dfecdc 15%, #dfecdc 16.67%, #fff 16.67%, #fff 50%, #dfecdc 50%, #dfecdc 51.67%, #ffffff 51.67%, #ffffff 55%, #dfecdc 55%, #dfecdc 56.67%, #fff 56.67%, #fff 60%, #dfecdc 60%, #dfecdc 61.67%, #fff 61.67%, #fff 65%, #dfecdc 65%, #dfecdc 66.67%, #fff 66.67%, #fff 100%);
+	background-size: 60px 60px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	border-top: 1px dashed #fff;
+	border-bottom: 1px dashed #bbb;
+}
+
+.tabbyoptions .card pre:before,
+.tabbyoptions .card pre:after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 100%;
+	background-image: radial-gradient( #e8e8e8 1px, #d8d8d8 3px, #999 4px, transparent 4px);
+	background-size: 26px 26px;
+}
+
+.tabbyoptions .card pre:before {
+    top: 0;
+    left: 0;
+    border-right: 1px dashed #ddd;
+}
+
+.tabbyoptions .card pre:after {
+    top: 0;
+    right: 0;
+    border-left: 1px dashed #ddd;
+}
+
+.after-settings {
+	margin-bottom: 1em;
+}
+
+.tabbyoptions .contribute {
+	background-color: #ffd566;
+	margin-top: 2em;
+	padding: 1em 2em;
+}
+
+.tabbyoptions .contribute h2 {
+	border-bottom: 2px solid currentColor;
+}
+
+.tabbycards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax( 260px, 1fr));
+	column-gap: 1.6rem;
+	margin-top: 0;
+}
+
+.tabbycards .card {
+	color: #fff;
+	display: flex;
+	flex-direction:column;
+	border: 0;
+	position:relative;
+	transition: all 1s;
+	background-color: #4e426c;
+}
+
+.tabbycards .card:hover {
+	background-color: #bf461d
+}
+
+.tabbycards .card.tabbycat,
+.tabbycards .card.tabbycat:hover {
+	background: none;
+}
+
+.tabbycards .card h2 {
+	color: #fff;
+	font-size: 2em;
+	line-height: 1.2;
+	height: 4em;
+	border-bottom: 2px solid currentColor;
+}
+
+.tabbycards .card p {
+	font-size: 1.1em;
+}
+
+.tabbycards form {
+	margin-top: 2em;
+	background-color: #fff;
+	border: 0;
+	padding: 1em;
+}
+
+.tabbycards .card .submit {
+	border-top: 2px solid currentColor;
+}
+
+.tabbycards .submit {
+	margin-top:  auto;
+	text-align: center;
+	max-width: 100%;
+	padding-top: 2em;
+}
+
+.card.tabbycat {
+	min-height: 220px;
+	justify-self: end;
+	padding: 0;
+	width: 100%;
+	box-shadow: none;
+}
+
+.tabbycat img {
+	position: absolute;
+	bottom: 1em;
+	width: 100%;
+	height: auto;
+}

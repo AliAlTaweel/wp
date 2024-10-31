@@ -1,0 +1,397 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tabby Responsive Tabs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 12:15+0000\n"
+"PO-Revision-Date: 2022-04-10 20:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.0; wp-5.9.2\n"
+"X-Domain: tabby-responsive-tabs"
+
+#: includes/admin.php:165
+msgid ""
+"A collection of one-click presets can be used as an easy starting point for "
+"further customisation."
+msgstr ""
+"Tek tıkla ön ayar koleksiyonu, daha fazla özelleştirme için kolay bir "
+"başlangıç noktası olarak kullanılabilir."
+
+#: includes/admin.php:212
+msgid "A custom plugin specifically for your site"
+msgstr "Siteniz için özel bir eklenti"
+
+#: includes/admin.php:184
+#| msgid ""
+#| "A tab can be specified within a 'tabby responsive tabs' tabgroup so that "
+#| "it opens a link to any URL."
+msgid ""
+"A tab can be specified within a tabby responsive tabs tabgroup so that it "
+"opens a link to any URL."
+msgstr ""
+"Bir sekme, herhangi bir URL'ye bir bağlantı açacak şekilde bir tabby "
+"responsive tabs' sekme grubu içinde belirtilebilir."
+
+#: includes/admin.php:164
+msgid ""
+"All customisations are made using a simple point & click interface without "
+"the need to edit any code."
+msgstr ""
+"Tüm özelleştirmeler, herhangi bir kodu düzenlemeye gerek kalmadan basit bir "
+"işaretle ve tıkla arayüzü kullanılarak yapılır."
+
+#: includes/admin.php:115
+msgid ""
+"Alternatively the optional 'Tabby responsive tabs customiser' add-on can be "
+"used to customise the tab design without any code editing."
+msgstr ""
+"Alternatif olarak, sekme tasarımını herhangi bir kod düzenlemesi olmadan "
+"özelleştirmek için isteğe bağlı 'Tabby responsive tabs customiser' eklentisi "
+"kullanılabilir."
+
+#: includes/admin.php:193
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' that keeps all sections of the "
+#| "accordion closed on page load."
+msgid ""
+"An add-on for tabby responsive tabs that keeps all sections of the accordion "
+"closed on page load."
+msgstr ""
+"Sayfa yüklendiğinde akordeonun tüm bölümlerini kapalı tutan tabby responsive "
+"tabs için bir eklenti."
+
+#: includes/admin.php:203
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' to keep the currently active tab "
+#| "open after a reload."
+msgid ""
+"An add-on for tabby responsive tabs to keep the currently active tab open "
+"after a reload."
+msgstr ""
+"Yeniden yüklemeden sonra o anda etkin olan sekmeyi açık tutmak için tabby "
+"responsive tabs için bir eklenti."
+
+#: includes/admin.php:173
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which adds a '[tabbylink]' "
+#| "shortcode."
+msgid "An add-on for tabby responsive tabs which adds a [tabbylink] shortcode."
+msgstr ""
+"Bir [tabbylink] kısa kodu ekleyen tabby responsive tabs için bir eklenti."
+
+#: includes/admin.php:163
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which allows you to easily "
+#| "customise your tabs."
+msgid ""
+"An add-on for tabby responsive tabs which allows you to easily customise "
+"your tabs."
+msgstr ""
+"Sekmelerinizi kolayca özelleştirmenizi sağlayan tabby responsive tabs için "
+"bir eklenti."
+
+#: includes/admin.php:183
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which enables a tab to act as a "
+#| "link to any URL."
+msgid ""
+"An add-on for tabby responsive tabs which enables a tab to act as a link to "
+"any URL."
+msgstr ""
+"Bir sekmenin herhangi bir URL'ye bağlantı görevi görmesini sağlayan tabby "
+"responsive tabs için bir eklenti."
+
+#. translators: Developer name: cubecolour
+#: includes/admin.php:59
+msgid "by %1$s"
+msgstr "%1$s tarafından"
+
+#. Description of the plugin
+msgid ""
+"Create responsive tabs inside your posts, pages or custom post types by "
+"adding simple shortcodes."
+msgstr ""
+"Basit kısa kodlar ekleyerek gönderilerinizin, sayfalarınızın veya özel "
+"gönderi türlerinizin içinde duyarlı sekmeler oluşturun."
+
+#. Author of the plugin
+msgid "cubecolour"
+msgstr "cubecolour"
+
+#: tabby-responsive-tabs.php:99
+msgid "Cubecolour on twitter"
+msgstr "Twitter'da Cubecolour"
+
+#: includes/admin.php:211
+msgid "Custom styles or functionality"
+msgstr "Özel stiller veya işlevsellik"
+
+#: includes/admin.php:65
+msgid "Default stylesheet"
+msgstr "Varsayılan stil sayfası"
+
+#: tabby-responsive-tabs.php:97
+msgid "Donate"
+msgstr "Bağış yapmak"
+
+#: includes/admin.php:96
+msgid "Font Awesome icon style"
+msgstr "Font Awesome simge stili"
+
+#. Author URI of the plugin
+msgid "https://cubecolour.co.uk"
+msgstr "https://cubecolor.co.uk"
+
+#. Plugin URI of the plugin
+msgid "https://cubecolour.co.uk/tabby-responsive-tabs"
+msgstr "https://cubecolor.co.uk/tabby-responsive-tabs"
+
+#. translators: Link to the developer website, link to the reviews page
+#: includes/admin.php:120
+#| msgid ""
+#| "If this plugin or has provided you with some value, or it has saved you "
+#| "some development time, please consider purchasing an add-on, or making a "
+#| "contribution to %1$sthe developer%2$s, and also consider writing a brief "
+#| "%3$sreview%2$s of the plugin."
+msgid ""
+"If this plugin or has provided you with some value, or it has saved you some "
+"development time, please consider purchasing an add-on, or making a "
+"contribution to %1$sthe developer%2$s, and writing a brief %3$sreview%2$s of "
+"the plugin."
+msgstr ""
+"Bu eklenti size bir değer kattıysa veya size biraz değer kattıysa veya "
+"geliştirme süresinden tasarruf etmenizi sağladıysa, lütfen bir eklenti satın "
+"almayı veya %1$sgeliştiriciye%2$s katkıda bulunmayı ve %3$skısa bir yazı "
+"yazmayı düşünün. eklentinin%2$s gözden geçirin."
+
+#: includes/admin.php:66
+#| msgid ""
+#| "If you are using a custom set of 'tabby' styles in your child theme or "
+#| "elsewhere, uncheck the checkbox below to remove the default 'tabby' "
+#| "stylesheet."
+msgid ""
+"If you are using a custom set of tabby styles in your child theme or "
+"elsewhere, uncheck the checkbox below to remove the default tabby stylesheet."
+msgstr ""
+"Alt temanızda veya başka bir yerde özel bir 'tabby' stil seti "
+"kullanıyorsanız, varsayılan tabby stil sayfasını kaldırmak için aşağıdaki "
+"onay kutusunun işaretini kaldırın."
+
+#. translators: Link to the official font awesome plugin on WordPress.org
+#: includes/admin.php:68
+msgid ""
+"If you are using the official %1$sfont awesome plugin%2$s to add icon "
+"support, you can choose the icon style to be used in tab titles. Only "
+"regular and solid icons are available in font awesome free."
+msgstr ""
+"Simge desteği eklemek için resmi %1$sFont Awesome eklentisi%2$s "
+"kullanıyorsanız, sekme başlıklarında kullanılacak simge stilini "
+"seçebilirsiniz. Harika ücretsiz yazı tipinde yalnızca düzenli ve sağlam "
+"simgeler mevcuttur."
+
+#. translators: <pre> tags
+#: includes/admin.php:132
+msgid ""
+"If you copy & paste the following shortcodes into your visual editor, be "
+"sure to delete any %1$s tags surrounding the content."
+msgstr ""
+"Aşağıdaki kısa kodları görsel düzenleyicinize kopyalayıp yapıştırırsanız, "
+"içeriği çevreleyen %1$s etiketlerini sildiğinizden emin olun."
+
+#: includes/admin.php:79
+#| msgid "Include the default 'tabby' stylesheet:"
+msgid "Include the default tabby stylesheet:"
+msgstr "Varsayılan tabby stil sayfasını dahil edin:"
+
+#: includes/admin.php:130
+msgid ""
+"It is recommended to leave a blank line between each shortcode and block of "
+"content."
+msgstr ""
+"Her kısa kod ve içerik bloğu arasında boş bir satır bırakılması önerilir."
+
+#. translators: Link to the plugin's readme.txt file, link to the plugin's page on WordPress.org
+#: includes/admin.php:155
+msgid ""
+"Please refer to the plugin's %1$sreadme file%2$s or the WordPress.org "
+"%3$splugin page%4$s for more information."
+msgstr ""
+"Daha fazla bilgi için lütfen eklentinin %1$sreadme dosyasına%2$s veya "
+"WordPress.org %3$splugin sayfasına%4$s bakın."
+
+#. translators: Link to the plugin's support forum on WordPress.org
+#: includes/admin.php:157
+#| msgid ""
+#| "Plugin support on WordPress.org: %1$s'tabby responsive tabs' support "
+#| "forum%2$s."
+msgid ""
+"Plugin support on WordPress.org: %1$stabby responsive tabs support forum%2$s."
+msgstr ""
+"WordPress.org'da eklenti desteği: %1$stabby responsive tabs destek "
+"forumu%2$s."
+
+#: includes/admin.php:126
+msgid "Plugin usage"
+msgstr "Eklenti kullanımı"
+
+#: includes/admin.php:168 includes/admin.php:178 includes/admin.php:188
+#: includes/admin.php:198 includes/admin.php:207
+msgid "Purchase add-on"
+msgstr "Eklenti satın al"
+
+#: includes/admin.php:216
+msgid "Request quote"
+msgstr "Teklif iste"
+
+#: tabby-responsive-tabs.php:98
+msgid "Review"
+msgstr "Gözden geçirmek"
+
+#: tabby-responsive-tabs.php:100
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: tabby-responsive-tabs.php:96
+msgid "Support"
+msgstr "Destek"
+
+#: includes/admin.php:83
+msgid "Tab title element (default: H2)"
+msgstr "Sekme başlığı öğesi (varsayılan: H2)"
+
+#. Plugin Name of the plugin
+msgid "Tabby Responsive Tabs"
+msgstr "Tekir Duyarlı Sekmeler"
+
+#: includes/admin.php:118
+msgid "Thank you!"
+msgstr "Teşekkür ederim!"
+
+#: includes/admin.php:195
+msgid "The tab display (desktop view) is unaffected."
+msgstr "Sekme ekranı (masaüstü görünümü) etkilenmez."
+
+#: includes/admin.php:129
+#| msgid ""
+#| "The title parameter sets the text on the tab, the content is added "
+#| "between the shortcodes, and the '[tabbyending]' shortcode is used once "
+#| "per tabgroup and must be placed after the last tab's content."
+msgid ""
+"The title parameter sets the text on the tab, the content is added between "
+"the shortcodes, and the [tabbyending] shortcode is used once per tabgroup "
+"and must be placed after the last tab's content."
+msgstr ""
+"Title parametresi sekmedeki metni ayarlar, içerik kısa kodlar arasına "
+"eklenir ve [tabbyending] kısa kodu her sekme grubu için bir kez kullanılır "
+"ve son sekmenin içeriğinden sonra yerleştirilmelidir."
+
+#. translators: [tabby],[tabbyending]
+#: includes/admin.php:128
+msgid ""
+"There are two shortcodes which should both be used, %1$s and %2$s. These are "
+"added in the visual or text editor, or within a shortcode block in the block "
+"editor."
+msgstr ""
+"Her ikisinin de kullanılması gereken iki kısa kod vardır, %1$s ve %2$s. "
+"Bunlar görsel veya metin düzenleyicide veya blok düzenleyicide bir kısa kod "
+"bloğunda eklenir."
+
+#: includes/admin.php:185
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby link to "
+"tab' add-on as each one has a different purpose."
+msgstr ""
+"Bu eklenti, her birinin farklı bir amacı olduğundan, benzer şekilde "
+"adlandırılan 'Sekmeye sekme bağlantısı' eklentisiyle karıştırılmamalıdır."
+
+#: includes/admin.php:175
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby tab to "
+"url link' add-on as each one has a different purpose."
+msgstr ""
+"Bu eklenti, her birinin farklı bir amacı olduğundan, benzer şekilde "
+"adlandırılan 'URl bağlantısına sekme sekmesi' eklentisiyle "
+"karıştırılmamalıdır."
+
+#: includes/admin.php:194
+msgid ""
+"This changes the default behaviour for the accordion so no tab content is "
+"shown when the page is initially loaded."
+msgstr ""
+"Bu, akordeon için varsayılan davranışı değiştirir, böylece sayfa ilk "
+"yüklendiğinde hiçbir sekme içeriği gösterilmez."
+
+#: includes/admin.php:204
+#| msgid ""
+#| "This enables the currently active tab in a 'tabby responsive tabs' "
+#| "tabgroup to remain the active (open) tab after the page has been "
+#| "reloaded/refreshed."
+msgid ""
+"This enables the currently active tab in a tabby responsive tabs tabgroup to "
+"remain the active (open) tab after the page has been reloaded/refreshed."
+msgstr ""
+"Bu, tabby responsive tabs sekme grubundaki o anda etkin olan sekmenin, sayfa "
+"yeniden yüklendikten/yenilendikten sonra etkin (açık) sekme olarak kalmasını "
+"sağlar."
+
+#: includes/admin.php:213
+msgid ""
+"This is a bespoke service to provide a custom-made add-on plugin to extend "
+"tabby responsive tabs or load a custom tabs stylesheet created to meet your "
+"exact requirements."
+msgstr ""
+"Bu, sekmeli duyarlı sekmeleri genişletmek veya tam gereksinimlerinizi "
+"karşılamak için oluşturulmuş özel bir sekme stil sayfası yüklemek için özel "
+"yapım bir eklenti eklentisi sağlamak için özel olarak hazırlanmış bir "
+"hizmettir."
+
+#: includes/admin.php:138
+msgid "This is the content of the first tab."
+msgstr "Bu, ilk sekmenin içeriğidir."
+
+#: includes/admin.php:143
+msgid "This is the content of the second tab."
+msgstr "Bu, ikinci sekmenin içeriğidir."
+
+#: includes/admin.php:148
+msgid "This is the content of the third tab."
+msgstr "Bu, üçüncü sekmenin içeriğidir."
+
+#: includes/admin.php:174
+msgid ""
+"This shortcode creates a link to a tab on the same page, where selecting the "
+"link does not cause the page to reload."
+msgstr ""
+"Bu kısa kod, aynı sayfadaki bir sekmeye bağlantı oluşturur, burada bağlantı "
+"seçilmesi sayfanın yeniden yüklenmesine neden olmaz."
+
+#: includes/admin.php:110
+msgid "To customise how your tabs display, either:"
+msgstr "Sekmelerinizin nasıl görüntüleneceğini özelleştirmek için:"
+
+#. translators: Link to the tabby stylesheet
+#: includes/admin.php:114
+#| msgid ""
+#| "Uncheck the option above, copy the css rules from the %1$stabby "
+#| "stylesheet%2$s into either your child theme's stylesheet or the custom "
+#| "css section of the WordPress customizer, and edit the css there."
+msgid ""
+"Uncheck the option above, copy the css rules from the %1$stabby "
+"stylesheet%2$s into either your child theme's stylesheet or the custom css "
+"section of the WordPress customizer, and make any required edits to that "
+"copy of the css."
+msgstr ""
+"Yukarıdaki seçeneğin işaretini kaldırın, %1$stabby stil sayfasından%2$s css "
+"kurallarını alt temanızın stil sayfasına veya WordPress özelleştiricinin "
+"özel css bölümüne kopyalayın ve css'nin bu kopyasında gerekli düzenlemeleri "
+"yapın."
+
+#: includes/admin.php:53
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Bu sayfaya erişmek için yeterli izniniz yok."

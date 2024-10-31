@@ -1,0 +1,389 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tabby Responsive Tabs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 12:15+0000\n"
+"PO-Revision-Date: 2022-04-10 20:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: Polish\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10 >= 2 && n%10<=4 "
+"&&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.0; wp-5.9.2\n"
+"X-Domain: tabby-responsive-tabs"
+
+#: includes/admin.php:165
+msgid ""
+"A collection of one-click presets can be used as an easy starting point for "
+"further customisation."
+msgstr ""
+"Zbiór gotowych ustawień jednym kliknięciem może służyć jako łatwy punkt "
+"wyjścia do dalszego dostosowywania."
+
+#: includes/admin.php:212
+msgid "A custom plugin specifically for your site"
+msgstr "Niestandardowa wtyczka specjalnie dla Twojej witryny"
+
+#: includes/admin.php:184
+#| msgid ""
+#| "A tab can be specified within a 'tabby responsive tabs' tabgroup so that "
+#| "it opens a link to any URL."
+msgid ""
+"A tab can be specified within a tabby responsive tabs tabgroup so that it "
+"opens a link to any URL."
+msgstr ""
+"Kartę można określić w grupie kart tabby responsive tabs, aby otwierała link "
+"do dowolnego adresu URL."
+
+#: includes/admin.php:164
+msgid ""
+"All customisations are made using a simple point & click interface without "
+"the need to edit any code."
+msgstr ""
+"Wszystkie dostosowania są dokonywane za pomocą prostego interfejsu typu "
+"„wskaż i kliknij”, bez konieczności edytowania jakiegokolwiek kodu."
+
+#: includes/admin.php:115
+msgid ""
+"Alternatively the optional 'Tabby responsive tabs customiser' add-on can be "
+"used to customise the tab design without any code editing."
+msgstr ""
+"Alternatywnie można użyć opcjonalnego dodatku „Tabby responsive tabs "
+"customiser”, aby dostosować projekt karty bez edycji kodu."
+
+#: includes/admin.php:193
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' that keeps all sections of the "
+#| "accordion closed on page load."
+msgid ""
+"An add-on for tabby responsive tabs that keeps all sections of the accordion "
+"closed on page load."
+msgstr ""
+"Dodatek do tabby responsive tabs, który utrzymuje wszystkie sekcje akordeonu "
+"zamknięte podczas ładowania strony."
+
+#: includes/admin.php:203
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' to keep the currently active tab "
+#| "open after a reload."
+msgid ""
+"An add-on for tabby responsive tabs to keep the currently active tab open "
+"after a reload."
+msgstr ""
+"Dodatek do tabby responsive tabs, który utrzymuje otwartą aktywną kartę po "
+"przeładowaniu."
+
+#: includes/admin.php:173
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which adds a '[tabbylink]' "
+#| "shortcode."
+msgid "An add-on for tabby responsive tabs which adds a [tabbylink] shortcode."
+msgstr "Dodatek do tabby responsive tabs, który dodaje krótki kod [tabbylink]."
+
+#: includes/admin.php:163
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which allows you to easily "
+#| "customise your tabs."
+msgid ""
+"An add-on for tabby responsive tabs which allows you to easily customise "
+"your tabs."
+msgstr ""
+"Dodatek do tabby responsive tabs, który umożliwia łatwe dostosowywanie kart."
+
+#: includes/admin.php:183
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which enables a tab to act as a "
+#| "link to any URL."
+msgid ""
+"An add-on for tabby responsive tabs which enables a tab to act as a link to "
+"any URL."
+msgstr ""
+"Dodatek do tabby responsive tabs, który umożliwia karcie działanie jako "
+"łącze do dowolnego adresu URL."
+
+#. translators: Developer name: cubecolour
+#: includes/admin.php:59
+msgid "by %1$s"
+msgstr "przez %1$s"
+
+#. Description of the plugin
+msgid ""
+"Create responsive tabs inside your posts, pages or custom post types by "
+"adding simple shortcodes."
+msgstr ""
+"Twórz responsywne zakładki w swoich postach, stronach lub niestandardowych "
+"typach postów, dodając proste skróty."
+
+#. Author of the plugin
+msgid "cubecolour"
+msgstr "cubecolour"
+
+#: tabby-responsive-tabs.php:99
+msgid "Cubecolour on twitter"
+msgstr "Cubecolour na Twitterze"
+
+#: includes/admin.php:211
+msgid "Custom styles or functionality"
+msgstr "Niestandardowe style lub funkcjonalność"
+
+#: includes/admin.php:65
+msgid "Default stylesheet"
+msgstr "Domyślny arkusz stylów"
+
+#: tabby-responsive-tabs.php:97
+msgid "Donate"
+msgstr "Podarować"
+
+#: includes/admin.php:96
+msgid "Font Awesome icon style"
+msgstr "Styl ikony Font Awesome"
+
+#. Author URI of the plugin
+msgid "https://cubecolour.co.uk"
+msgstr "https://cubecolour.co.uk"
+
+#. Plugin URI of the plugin
+msgid "https://cubecolour.co.uk/tabby-responsive-tabs"
+msgstr "https://cubecolor.co.uk/tabby-responsive-tabs"
+
+#. translators: Link to the developer website, link to the reviews page
+#: includes/admin.php:120
+#| msgid ""
+#| "If this plugin or has provided you with some value, or it has saved you "
+#| "some development time, please consider purchasing an add-on, or making a "
+#| "contribution to %1$sthe developer%2$s, and also consider writing a brief "
+#| "%3$sreview%2$s of the plugin."
+msgid ""
+"If this plugin or has provided you with some value, or it has saved you some "
+"development time, please consider purchasing an add-on, or making a "
+"contribution to %1$sthe developer%2$s, and writing a brief %3$sreview%2$s of "
+"the plugin."
+msgstr ""
+"Jeśli ta wtyczka lub zapewniła Ci pewną wartość lub zaoszczędziła trochę "
+"czasu na opracowywanie, rozważ zakup dodatku lub wniesienie wkładu do "
+"%1$sprogramisty%2$s i napisanie krótkiego opisu %3$sprzegląd%2$s wtyczki."
+
+#: includes/admin.php:66
+#| msgid ""
+#| "If you are using a custom set of 'tabby' styles in your child theme or "
+#| "elsewhere, uncheck the checkbox below to remove the default 'tabby' "
+#| "stylesheet."
+msgid ""
+"If you are using a custom set of tabby styles in your child theme or "
+"elsewhere, uncheck the checkbox below to remove the default tabby stylesheet."
+msgstr ""
+"Jeśli używasz niestandardowego zestawu stylów tabby w motywie podrzędnym lub "
+"w innym miejscu, usuń zaznaczenie pola wyboru poniżej, aby usunąć domyślny "
+"arkusz stylów tabby."
+
+#. translators: Link to the official font awesome plugin on WordPress.org
+#: includes/admin.php:68
+msgid ""
+"If you are using the official %1$sfont awesome plugin%2$s to add icon "
+"support, you can choose the icon style to be used in tab titles. Only "
+"regular and solid icons are available in font awesome free."
+msgstr ""
+"Jeśli do dodania obsługi ikon używasz oficjalnej wtyczki %1$sFont "
+"Awesome%2$s, możesz wybrać styl ikon, który będzie używany w tytułach kart. "
+"Tylko zwykłe i solidne ikony są dostępne w czcionce niesamowitej za darmo.\n"
+"\n"
+
+#. translators: <pre> tags
+#: includes/admin.php:132
+msgid ""
+"If you copy & paste the following shortcodes into your visual editor, be "
+"sure to delete any %1$s tags surrounding the content."
+msgstr ""
+"Jeśli skopiujesz i wkleisz poniższe skróty do edytora wizualnego, pamiętaj o "
+"usunięciu wszystkich tagów %1$s otaczających treść."
+
+#: includes/admin.php:79
+#| msgid "Include the default 'tabby' stylesheet:"
+msgid "Include the default tabby stylesheet:"
+msgstr "Dołącz domyślny arkusz stylów tabby:"
+
+#: includes/admin.php:130
+msgid ""
+"It is recommended to leave a blank line between each shortcode and block of "
+"content."
+msgstr ""
+"Zaleca się pozostawienie pustej linii między każdym skrótem a blokiem treści."
+
+#. translators: Link to the plugin's readme.txt file, link to the plugin's page on WordPress.org
+#: includes/admin.php:155
+msgid ""
+"Please refer to the plugin's %1$sreadme file%2$s or the WordPress.org "
+"%3$splugin page%4$s for more information."
+msgstr ""
+"Aby uzyskać więcej informacji, zapoznaj się z plikiem %1$sreadme%2$s wtyczki "
+"lub stroną wtyczki %3$s%4$s na WordPress.org."
+
+#. translators: Link to the plugin's support forum on WordPress.org
+#: includes/admin.php:157
+#| msgid ""
+#| "Plugin support on WordPress.org: %1$s'tabby responsive tabs' support "
+#| "forum%2$s."
+msgid ""
+"Plugin support on WordPress.org: %1$stabby responsive tabs support forum%2$s."
+msgstr ""
+"Obsługa wtyczek na WordPress.org: forum pomocy %1$stabby responsive tabs "
+"kart%2$s."
+
+#: includes/admin.php:126
+msgid "Plugin usage"
+msgstr "Użycie wtyczki"
+
+#: includes/admin.php:168 includes/admin.php:178 includes/admin.php:188
+#: includes/admin.php:198 includes/admin.php:207
+msgid "Purchase add-on"
+msgstr "Kup dodatek"
+
+#: includes/admin.php:216
+msgid "Request quote"
+msgstr "Poproś o wycenę"
+
+#: tabby-responsive-tabs.php:98
+msgid "Review"
+msgstr "Recenzja"
+
+#: tabby-responsive-tabs.php:100
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: tabby-responsive-tabs.php:96
+msgid "Support"
+msgstr "Wsparcie"
+
+#: includes/admin.php:83
+msgid "Tab title element (default: H2)"
+msgstr "Element tytułu karty (domyślnie: H2)"
+
+#. Plugin Name of the plugin
+msgid "Tabby Responsive Tabs"
+msgstr "Tabby Responsive Tabs"
+
+#: includes/admin.php:118
+msgid "Thank you!"
+msgstr "Dziękuję Ci!"
+
+#: includes/admin.php:195
+msgid "The tab display (desktop view) is unaffected."
+msgstr "Nie ma to wpływu na wyświetlanie zakładek (widok pulpitu)."
+
+#: includes/admin.php:129
+#| msgid ""
+#| "The title parameter sets the text on the tab, the content is added "
+#| "between the shortcodes, and the '[tabbyending]' shortcode is used once "
+#| "per tabgroup and must be placed after the last tab's content."
+msgid ""
+"The title parameter sets the text on the tab, the content is added between "
+"the shortcodes, and the [tabbyending] shortcode is used once per tabgroup "
+"and must be placed after the last tab's content."
+msgstr ""
+"Parametr title określa tekst na karcie, zawartość jest dodawana między "
+"skrótami, a skrót [tabbyending] jest używany raz na grupę kart i musi być "
+"umieszczony po zawartości ostatniej karty."
+
+#. translators: [tabby],[tabbyending]
+#: includes/admin.php:128
+msgid ""
+"There are two shortcodes which should both be used, %1$s and %2$s. These are "
+"added in the visual or text editor, or within a shortcode block in the block "
+"editor."
+msgstr ""
+"Istnieją dwa skróty, których należy użyć, %1$s i %2$s. Są one dodawane w "
+"edytorze wizualnym lub tekstowym albo w bloku shortcode w edytorze bloków."
+
+#: includes/admin.php:185
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby link to "
+"tab' add-on as each one has a different purpose."
+msgstr ""
+"Tego dodatku nie należy mylić z podobnie nazwanym dodatkiem „Tabby link to "
+"tab, ponieważ każdy z nich ma inny cel."
+
+#: includes/admin.php:175
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby tab to "
+"url link' add-on as each one has a different purpose."
+msgstr ""
+"Tego dodatku nie należy mylić z dodatkiem o podobnej nazwie „Tabby tab to "
+"url link”, ponieważ każdy z nich ma inny cel."
+
+#: includes/admin.php:194
+msgid ""
+"This changes the default behaviour for the accordion so no tab content is "
+"shown when the page is initially loaded."
+msgstr ""
+"Zmienia to domyślne zachowanie akordeonu, dzięki czemu po pierwszym "
+"załadowaniu strony nie jest wyświetlana zawartość karty."
+
+#: includes/admin.php:204
+#| msgid ""
+#| "This enables the currently active tab in a 'tabby responsive tabs' "
+#| "tabgroup to remain the active (open) tab after the page has been "
+#| "reloaded/refreshed."
+msgid ""
+"This enables the currently active tab in a tabby responsive tabs tabgroup to "
+"remain the active (open) tab after the page has been reloaded/refreshed."
+msgstr ""
+"Dzięki temu aktualnie aktywna karta w grupie karty responsywne pozostanie "
+"aktywną (otwartą) kartą po ponownym załadowaniu/odświeżeniu strony."
+
+#: includes/admin.php:213
+msgid ""
+"This is a bespoke service to provide a custom-made add-on plugin to extend "
+"tabby responsive tabs or load a custom tabs stylesheet created to meet your "
+"exact requirements."
+msgstr ""
+"Jest to usługa szyta na miarę, która zapewnia niestandardową wtyczkę, aby "
+"rozszerzyć responsywne karty tabby lub załadować niestandardowy arkusz "
+"stylów kart utworzony w celu spełnienia dokładnych wymagań."
+
+#: includes/admin.php:138
+msgid "This is the content of the first tab."
+msgstr "To jest zawartość pierwszej zakładki."
+
+#: includes/admin.php:143
+msgid "This is the content of the second tab."
+msgstr "To jest zawartość drugiej zakładki."
+
+#: includes/admin.php:148
+msgid "This is the content of the third tab."
+msgstr "To jest zawartość trzeciej zakładki."
+
+#: includes/admin.php:174
+msgid ""
+"This shortcode creates a link to a tab on the same page, where selecting the "
+"link does not cause the page to reload."
+msgstr ""
+"Ten krótki kod tworzy link do karty na tej samej stronie, gdzie wybranie "
+"linku nie powoduje ponownego załadowania strony."
+
+#: includes/admin.php:110
+msgid "To customise how your tabs display, either:"
+msgstr "Aby dostosować sposób wyświetlania kart:"
+
+#. translators: Link to the tabby stylesheet
+#: includes/admin.php:114
+#| msgid ""
+#| "Uncheck the option above, copy the css rules from the %1$stabby "
+#| "stylesheet%2$s into either your child theme's stylesheet or the custom "
+#| "css section of the WordPress customizer, and edit the css there."
+msgid ""
+"Uncheck the option above, copy the css rules from the %1$stabby "
+"stylesheet%2$s into either your child theme's stylesheet or the custom css "
+"section of the WordPress customizer, and make any required edits to that "
+"copy of the css."
+msgstr ""
+"Odznacz powyższą opcję, skopiuj reguły css z %1$stabby stylesheet%2$s do "
+"arkusza stylów motywu podrzędnego lub niestandardowej sekcji css w "
+"dostosowywaniu WordPressa i wprowadź wymagane zmiany w tej kopii css."
+
+#: includes/admin.php:53
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nie masz wystarczających uprawnień, aby uzyskać dostęp do tej strony."

@@ -1,0 +1,393 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tabby Responsive Tabs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 12:15+0000\n"
+"PO-Revision-Date: 2022-04-10 20:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.0; wp-5.9.2\n"
+"X-Domain: tabby-responsive-tabs"
+
+#: includes/admin.php:165
+msgid ""
+"A collection of one-click presets can be used as an easy starting point for "
+"further customisation."
+msgstr ""
+"Колекція пресетів одним клацанням миші може бути використана як легка "
+"відправна точка для подальшої настройки."
+
+#: includes/admin.php:212
+msgid "A custom plugin specifically for your site"
+msgstr "Спеціальний плагін спеціально для вашого сайту"
+
+#: includes/admin.php:184
+#| msgid ""
+#| "A tab can be specified within a 'tabby responsive tabs' tabgroup so that "
+#| "it opens a link to any URL."
+msgid ""
+"A tab can be specified within a tabby responsive tabs tabgroup so that it "
+"opens a link to any URL."
+msgstr ""
+"Вкладку можна вказати в групі вкладок tabby responsive tabs, щоб вона "
+"відкривала посилання на будь-яку URL-адресу."
+
+#: includes/admin.php:164
+msgid ""
+"All customisations are made using a simple point & click interface without "
+"the need to edit any code."
+msgstr ""
+"Усі налаштування виконуються за допомогою простого інтерфейсу «наведи і "
+"клацни» без необхідності редагувати будь-який код."
+
+#: includes/admin.php:115
+msgid ""
+"Alternatively the optional 'Tabby responsive tabs customiser' add-on can be "
+"used to customise the tab design without any code editing."
+msgstr ""
+"Крім того, додаткове доповнення \"Tabby responsive tabs customiser\", можна "
+"використовувати для налаштування дизайну вкладки без будь-якого редагування "
+"коду."
+
+#: includes/admin.php:193
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' that keeps all sections of the "
+#| "accordion closed on page load."
+msgid ""
+"An add-on for tabby responsive tabs that keeps all sections of the accordion "
+"closed on page load."
+msgstr ""
+"Доповнення для tabby responsive tabs, яке тримає всі розділи акордеона "
+"закритими під час завантаження сторінки."
+
+#: includes/admin.php:203
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' to keep the currently active tab "
+#| "open after a reload."
+msgid ""
+"An add-on for tabby responsive tabs to keep the currently active tab open "
+"after a reload."
+msgstr ""
+"Доповнення для tabby responsive tabs, щоб залишати активну вкладку відкритою "
+"після перезавантаження."
+
+#: includes/admin.php:173
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which adds a '[tabbylink]' "
+#| "shortcode."
+msgid "An add-on for tabby responsive tabs which adds a [tabbylink] shortcode."
+msgstr "Доповнення для tabby responsive tabs, яке додає шорткод [tabbylink]."
+
+#: includes/admin.php:163
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which allows you to easily "
+#| "customise your tabs."
+msgid ""
+"An add-on for tabby responsive tabs which allows you to easily customise "
+"your tabs."
+msgstr ""
+"Доповнення для tabby responsive tabs, яке дозволяє легко налаштовувати свої "
+"вкладки."
+
+#: includes/admin.php:183
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which enables a tab to act as a "
+#| "link to any URL."
+msgid ""
+"An add-on for tabby responsive tabs which enables a tab to act as a link to "
+"any URL."
+msgstr ""
+"Доповнення для tabby responsive tabs, яке дозволяє вкладці діяти як "
+"посилання на будь-яку URL-адресу."
+
+#. translators: Developer name: cubecolour
+#: includes/admin.php:59
+msgid "by %1$s"
+msgstr "від %1$s"
+
+#. Description of the plugin
+msgid ""
+"Create responsive tabs inside your posts, pages or custom post types by "
+"adding simple shortcodes."
+msgstr ""
+"Створюйте адаптивні вкладки у своїх публікаціях, сторінках або "
+"користувацьких типах публікацій, додаючи прості шорткоди."
+
+#. Author of the plugin
+msgid "cubecolour"
+msgstr "cubecolour"
+
+#: tabby-responsive-tabs.php:99
+msgid "Cubecolour on twitter"
+msgstr "Cubecolour у Twitter"
+
+#: includes/admin.php:211
+msgid "Custom styles or functionality"
+msgstr "Спеціальні стилі або функціональність"
+
+#: includes/admin.php:65
+msgid "Default stylesheet"
+msgstr "Таблиця стилів за замовчуванням"
+
+#: tabby-responsive-tabs.php:97
+msgid "Donate"
+msgstr "Пожертвуйте"
+
+#: includes/admin.php:96
+msgid "Font Awesome icon style"
+msgstr "Стиль значка Font Awesome"
+
+#. Author URI of the plugin
+msgid "https://cubecolour.co.uk"
+msgstr "https://cubecolour.co.uk"
+
+#. Plugin URI of the plugin
+msgid "https://cubecolour.co.uk/tabby-responsive-tabs"
+msgstr "https://cubecolour.co.uk/tabby-responsive-tabs"
+
+#. translators: Link to the developer website, link to the reviews page
+#: includes/admin.php:120
+#| msgid ""
+#| "If this plugin or has provided you with some value, or it has saved you "
+#| "some development time, please consider purchasing an add-on, or making a "
+#| "contribution to %1$sthe developer%2$s, and also consider writing a brief "
+#| "%3$sreview%2$s of the plugin."
+msgid ""
+"If this plugin or has provided you with some value, or it has saved you some "
+"development time, please consider purchasing an add-on, or making a "
+"contribution to %1$sthe developer%2$s, and writing a brief %3$sreview%2$s of "
+"the plugin."
+msgstr ""
+"Якщо цей плагін приніс вам певну цінність, або він заощадив вам час на "
+"розробку, подумайте про придбання доповнення або внесіть внесок у %1$s, "
+"розробник%2$s і напишіть короткий опис %3$sreview%2$s плагіна."
+
+#: includes/admin.php:66
+#| msgid ""
+#| "If you are using a custom set of 'tabby' styles in your child theme or "
+#| "elsewhere, uncheck the checkbox below to remove the default 'tabby' "
+#| "stylesheet."
+msgid ""
+"If you are using a custom set of tabby styles in your child theme or "
+"elsewhere, uncheck the checkbox below to remove the default tabby stylesheet."
+msgstr ""
+"Якщо ви використовуєте спеціальний набір стилів tabby у своїй дочірній темі "
+"чи в іншому місці, зніміть прапорець нижче, щоб видалити таблицю стилів "
+"«tabby» за замовчуванням."
+
+#. translators: Link to the official font awesome plugin on WordPress.org
+#: includes/admin.php:68
+msgid ""
+"If you are using the official %1$sfont awesome plugin%2$s to add icon "
+"support, you can choose the icon style to be used in tab titles. Only "
+"regular and solid icons are available in font awesome free."
+msgstr ""
+"Якщо ви використовуєте офіційний плагін %1$sFontAwesome%2$s, щоб додати "
+"підтримку піктограм, ви можете вибрати стиль значка, який "
+"використовуватиметься в заголовках вкладок. Безкоштовно доступні лише "
+"звичайні та тверді значки."
+
+#. translators: <pre> tags
+#: includes/admin.php:132
+msgid ""
+"If you copy & paste the following shortcodes into your visual editor, be "
+"sure to delete any %1$s tags surrounding the content."
+msgstr ""
+"Якщо ви скопіюєте та вставите наведені нижче шорткоди у свій візуальний "
+"редактор, обов’язково видаліть усі теги %1$s, що оточують вміст."
+
+#: includes/admin.php:79
+#| msgid "Include the default 'tabby' stylesheet:"
+msgid "Include the default tabby stylesheet:"
+msgstr "Включіть таблицю стилів tabby за замовчуванням:"
+
+#: includes/admin.php:130
+msgid ""
+"It is recommended to leave a blank line between each shortcode and block of "
+"content."
+msgstr ""
+"Рекомендується залишати порожній рядок між кожним шорткодом і блоком вмісту."
+
+#. translators: Link to the plugin's readme.txt file, link to the plugin's page on WordPress.org
+#: includes/admin.php:155
+msgid ""
+"Please refer to the plugin's %1$sreadme file%2$s or the WordPress.org "
+"%3$splugin page%4$s for more information."
+msgstr ""
+"Будь ласка, перегляньте файл %1$sreadme%2$s плагіна або сторінку "
+"%3$splugin%4$s WordPress.org для отримання додаткової інформації."
+
+#. translators: Link to the plugin's support forum on WordPress.org
+#: includes/admin.php:157
+#| msgid ""
+#| "Plugin support on WordPress.org: %1$s'tabby responsive tabs' support "
+#| "forum%2$s."
+msgid ""
+"Plugin support on WordPress.org: %1$stabby responsive tabs support forum%2$s."
+msgstr ""
+"Підтримка плагінів на WordPress.org: форум підтримки %1$stabby responsive "
+"tabs%2$s."
+
+#: includes/admin.php:126
+msgid "Plugin usage"
+msgstr "Використання плагіна"
+
+#: includes/admin.php:168 includes/admin.php:178 includes/admin.php:188
+#: includes/admin.php:198 includes/admin.php:207
+msgid "Purchase add-on"
+msgstr "Придбати доповнення"
+
+#: includes/admin.php:216
+msgid "Request quote"
+msgstr "Запит пропозицій"
+
+#: tabby-responsive-tabs.php:98
+msgid "Review"
+msgstr "Огляд"
+
+#: tabby-responsive-tabs.php:100
+msgid "Settings"
+msgstr "Налаштування"
+
+#: tabby-responsive-tabs.php:96
+msgid "Support"
+msgstr "Підтримка"
+
+#: includes/admin.php:83
+msgid "Tab title element (default: H2)"
+msgstr "Елемент заголовка вкладки (за замовчуванням: H2)"
+
+#. Plugin Name of the plugin
+msgid "Tabby Responsive Tabs"
+msgstr "Tabby Responsive Tabs"
+
+#: includes/admin.php:118
+msgid "Thank you!"
+msgstr "Дякую!"
+
+#: includes/admin.php:195
+msgid "The tab display (desktop view) is unaffected."
+msgstr "Відображення вкладок (вигляд на робочому столі) не впливає."
+
+#: includes/admin.php:129
+#| msgid ""
+#| "The title parameter sets the text on the tab, the content is added "
+#| "between the shortcodes, and the '[tabbyending]' shortcode is used once "
+#| "per tabgroup and must be placed after the last tab's content."
+msgid ""
+"The title parameter sets the text on the tab, the content is added between "
+"the shortcodes, and the [tabbyending] shortcode is used once per tabgroup "
+"and must be placed after the last tab's content."
+msgstr ""
+"Параметр title встановлює текст на вкладці, вміст додається між шорткодами, "
+"а шорткод [tabbyending] використовується один раз для групи вкладок і "
+"повинен бути розміщений після вмісту останньої вкладки."
+
+#. translators: [tabby],[tabbyending]
+#: includes/admin.php:128
+msgid ""
+"There are two shortcodes which should both be used, %1$s and %2$s. These are "
+"added in the visual or text editor, or within a shortcode block in the block "
+"editor."
+msgstr ""
+"Є два шорткоди, які слід використовувати, %1$s і %2$s. Вони додаються у "
+"візуальному чи текстовому редакторі або в блок шорткоду в редакторі блоків."
+
+#: includes/admin.php:185
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby link to "
+"tab' add-on as each one has a different purpose."
+msgstr ""
+"Це доповнення не слід плутати з доповненням «Tabby link to tab» з "
+"аналогічною назвою, оскільки кожне з них має різне призначення."
+
+#: includes/admin.php:175
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby tab to "
+"url link' add-on as each one has a different purpose."
+msgstr ""
+"Це надбудова не слід плутати з доповненням з такою ж назвою \"Tabby tab to "
+"url link\", оскільки кожне з них має різне призначення."
+
+#: includes/admin.php:194
+msgid ""
+"This changes the default behaviour for the accordion so no tab content is "
+"shown when the page is initially loaded."
+msgstr ""
+"Це змінює поведінку за замовчуванням для акордеона, тому вміст вкладки не "
+"відображається під час початкового завантаження сторінки."
+
+#: includes/admin.php:204
+#| msgid ""
+#| "This enables the currently active tab in a 'tabby responsive tabs' "
+#| "tabgroup to remain the active (open) tab after the page has been "
+#| "reloaded/refreshed."
+msgid ""
+"This enables the currently active tab in a tabby responsive tabs tabgroup to "
+"remain the active (open) tab after the page has been reloaded/refreshed."
+msgstr ""
+"Це дає змогу активній вкладці в групі вкладок tabby responsive tabs, що "
+"реагують на вкладки, залишатися активною (відкритою) вкладкою після "
+"перезавантаження/оновлення сторінки."
+
+#: includes/admin.php:213
+msgid ""
+"This is a bespoke service to provide a custom-made add-on plugin to extend "
+"tabby responsive tabs or load a custom tabs stylesheet created to meet your "
+"exact requirements."
+msgstr ""
+"Це індивідуальний сервіс для надання спеціального додаткового плагіна для "
+"розширення чутливих вкладок або завантаження спеціальної таблиці стилів "
+"вкладок, створеної відповідно до ваших вимог."
+
+#: includes/admin.php:138
+msgid "This is the content of the first tab."
+msgstr "Це вміст першої вкладки."
+
+#: includes/admin.php:143
+msgid "This is the content of the second tab."
+msgstr "Це вміст другої вкладки."
+
+#: includes/admin.php:148
+msgid "This is the content of the third tab."
+msgstr "Це вміст третьої вкладки."
+
+#: includes/admin.php:174
+msgid ""
+"This shortcode creates a link to a tab on the same page, where selecting the "
+"link does not cause the page to reload."
+msgstr ""
+"Цей шорткод створює посилання на вкладку на тій же сторінці, при цьому вибір "
+"посилання не призводить до перезавантаження сторінки."
+
+#: includes/admin.php:110
+msgid "To customise how your tabs display, either:"
+msgstr "Щоб налаштувати відображення вкладок, виконайте наведені нижче дії."
+
+#. translators: Link to the tabby stylesheet
+#: includes/admin.php:114
+#| msgid ""
+#| "Uncheck the option above, copy the css rules from the %1$stabby "
+#| "stylesheet%2$s into either your child theme's stylesheet or the custom "
+#| "css section of the WordPress customizer, and edit the css there."
+msgid ""
+"Uncheck the option above, copy the css rules from the %1$stabby "
+"stylesheet%2$s into either your child theme's stylesheet or the custom css "
+"section of the WordPress customizer, and make any required edits to that "
+"copy of the css."
+msgstr ""
+"Зніміть прапорець вище, скопіюйте правила css із таблиці стилів "
+"%1$stabby%2$s у таблицю стилів вашої дочірньої теми або користувацький "
+"розділ css настроювача WordPress та внесіть усі необхідні зміни до цієї "
+"копії css."
+
+#: includes/admin.php:53
+msgid "You do not have sufficient permissions to access this page."
+msgstr "У вас недостатньо дозволів для доступу до цієї сторінки."

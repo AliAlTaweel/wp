@@ -1,0 +1,354 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tabby Responsive Tabs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 12:15+0000\n"
+"PO-Revision-Date: 2022-04-10 20:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.0; wp-5.9.2\n"
+"X-Domain: tabby-responsive-tabs"
+
+#: includes/admin.php:165
+msgid ""
+"A collection of one-click presets can be used as an easy starting point for "
+"further customisation."
+msgstr "ワンクリックプリセットのコレクションは、さらにカスタマイズするための簡単な開始点として使用できます。"
+
+#: includes/admin.php:212
+msgid "A custom plugin specifically for your site"
+msgstr "あなたのサイト専用のカスタムプラグイン"
+
+#: includes/admin.php:184
+#| msgid ""
+#| "A tab can be specified within a 'tabby responsive tabs' tabgroup so that "
+#| "it opens a link to any URL."
+msgid ""
+"A tab can be specified within a tabby responsive tabs tabgroup so that it "
+"opens a link to any URL."
+msgstr "タブは、tabby responsive tabsタブグループ内で指定できるため、任意のURLへのリンクが開きます。"
+
+#: includes/admin.php:164
+msgid ""
+"All customisations are made using a simple point & click interface without "
+"the need to edit any code."
+msgstr "すべてのカスタマイズは、コードを編集することなく、シンプルなポイント＆クリックインターフェイスを使用して行われます。"
+
+#: includes/admin.php:115
+msgid ""
+"Alternatively the optional 'Tabby responsive tabs customiser' add-on can be "
+"used to customise the tab design without any code editing."
+msgstr ""
+"または、オプションのTabby responsive tabs "
+"customiserアドオンを使用して、コードを編集せずにタブデザインをカスタマイズできます。"
+
+#: includes/admin.php:193
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' that keeps all sections of the "
+#| "accordion closed on page load."
+msgid ""
+"An add-on for tabby responsive tabs that keeps all sections of the accordion "
+"closed on page load."
+msgstr "ページの読み込み時にアコーディオンのすべてのセクションを閉じたままにする tabby responsive tabs のアドオン。"
+
+#: includes/admin.php:203
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' to keep the currently active tab "
+#| "open after a reload."
+msgid ""
+"An add-on for tabby responsive tabs to keep the currently active tab open "
+"after a reload."
+msgstr "リロード後に現在アクティブなタブを開いたままにするためのtabby responsive tabs のアドオン。"
+
+#: includes/admin.php:173
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which adds a '[tabbylink]' "
+#| "shortcode."
+msgid "An add-on for tabby responsive tabs which adds a [tabbylink] shortcode."
+msgstr "[tabbylink] ショートコードを追加するtabby responsive tabsのアドオン。"
+
+#: includes/admin.php:163
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which allows you to easily "
+#| "customise your tabs."
+msgid ""
+"An add-on for tabby responsive tabs which allows you to easily customise "
+"your tabs."
+msgstr "タブを簡単にカスタマイズできるtabby responsive tabsのアドオン。"
+
+#: includes/admin.php:183
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which enables a tab to act as a "
+#| "link to any URL."
+msgid ""
+"An add-on for tabby responsive tabs which enables a tab to act as a link to "
+"any URL."
+msgstr "タブが任意のURLへのリンクとして機能できるようにする tabby responsive tabs のアドオン。"
+
+#. translators: Developer name: cubecolour
+#: includes/admin.php:59
+msgid "by %1$s"
+msgstr "％1$s"
+
+#. Description of the plugin
+msgid ""
+"Create responsive tabs inside your posts, pages or custom post types by "
+"adding simple shortcodes."
+msgstr "簡単なショートコードを追加して、投稿、ページ、またはカスタム投稿タイプ内にレスポンシブタブを作成します。"
+
+#. Author of the plugin
+msgid "cubecolour"
+msgstr "cubecolour"
+
+#: tabby-responsive-tabs.php:99
+msgid "Cubecolour on twitter"
+msgstr "TwitterのCubecolour"
+
+#: includes/admin.php:211
+msgid "Custom styles or functionality"
+msgstr "カスタムスタイルまたは機能"
+
+#: includes/admin.php:65
+msgid "Default stylesheet"
+msgstr "デフォルトのスタイルシート"
+
+#: tabby-responsive-tabs.php:97
+msgid "Donate"
+msgstr "寄付"
+
+#: includes/admin.php:96
+msgid "Font Awesome icon style"
+msgstr "FontAwesomeアイコンスタイル"
+
+#. Author URI of the plugin
+msgid "https://cubecolour.co.uk"
+msgstr "https://cubecolour.co.uk"
+
+#. Plugin URI of the plugin
+msgid "https://cubecolour.co.uk/tabby-responsive-tabs"
+msgstr "https://cubecolour.co.uk/tabby-responsive-tabs"
+
+#. translators: Link to the developer website, link to the reviews page
+#: includes/admin.php:120
+#| msgid ""
+#| "If this plugin or has provided you with some value, or it has saved you "
+#| "some development time, please consider purchasing an add-on, or making a "
+#| "contribution to %1$sthe developer%2$s, and also consider writing a brief "
+#| "%3$sreview%2$s of the plugin."
+msgid ""
+"If this plugin or has provided you with some value, or it has saved you some "
+"development time, please consider purchasing an add-on, or making a "
+"contribution to %1$sthe developer%2$s, and writing a brief %3$sreview%2$s of "
+"the plugin."
+msgstr ""
+"このプラグインまたは何らかの価値を提供した場合、または開発時間を節約した場合は、アドオンを購入するか、％1$s開発者％2$sに貢献して、簡単な％3$を作成することを検討してください。プラグインの％1$sreview％2$s。"
+
+#: includes/admin.php:66
+#| msgid ""
+#| "If you are using a custom set of 'tabby' styles in your child theme or "
+#| "elsewhere, uncheck the checkbox below to remove the default 'tabby' "
+#| "stylesheet."
+msgid ""
+"If you are using a custom set of tabby styles in your child theme or "
+"elsewhere, uncheck the checkbox below to remove the default tabby stylesheet."
+msgstr ""
+"子テーマまたは他の場所で tabby スタイルのカスタムセットを使用している場合は、下のチェックボックスをオフにして、デフォルトの tabby "
+"スタイルシートを削除します。"
+
+#. translators: Link to the official font awesome plugin on WordPress.org
+#: includes/admin.php:68
+#| msgid ""
+#| "If you are using a the official %1$sfont awesome plugin%2$s to add icon "
+#| "support, you can choose the icon style to be used in tab titles. Only "
+#| "regular and solid icons are available in font awesome free."
+msgid ""
+"If you are using the official %1$sfont awesome plugin%2$s to add icon "
+"support, you can choose the icon style to be used in tab titles. Only "
+"regular and solid icons are available in font awesome free."
+msgstr ""
+"公式の％1 $ sFont Awesome plugin％2 $ "
+"sを使用してアイコンのサポートを追加している場合は、タブのタイトルで使用するアイコンのスタイルを選択できます。 font awesome "
+"freeで利用できるのは、通常のアイコンと単色のアイコンだけです。"
+
+#. translators: <pre> tags
+#: includes/admin.php:132
+msgid ""
+"If you copy & paste the following shortcodes into your visual editor, be "
+"sure to delete any %1$s tags surrounding the content."
+msgstr "次のショートコードをコピーしてビジュアルエディターに貼り付ける場合は、コンテンツを囲む％1$sタグを必ず削除してください。"
+
+#: includes/admin.php:79
+#| msgid "Include the default 'tabby' stylesheet:"
+msgid "Include the default tabby stylesheet:"
+msgstr "デフォルトの tabby スタイルシートを含めます。"
+
+#: includes/admin.php:130
+msgid ""
+"It is recommended to leave a blank line between each shortcode and block of "
+"content."
+msgstr "各ショートコードとコンテンツのブロックの間に空白行を残すことをお勧めします。"
+
+#. translators: Link to the plugin's readme.txt file, link to the plugin's page on WordPress.org
+#: includes/admin.php:155
+msgid ""
+"Please refer to the plugin's %1$sreadme file%2$s or the WordPress.org "
+"%3$splugin page%4$s for more information."
+msgstr ""
+"詳細については、プラグインの％1$s readmeファイル％2 $ sまたはWordPress.org％3 $ "
+"spluginページ％4$sを参照してください。"
+
+#. translators: Link to the plugin's support forum on WordPress.org
+#: includes/admin.php:157
+#| msgid ""
+#| "Plugin support on WordPress.org: %1$s'tabby responsive tabs' support "
+#| "forum%2$s."
+msgid ""
+"Plugin support on WordPress.org: %1$stabby responsive tabs support forum%2$s."
+msgstr "WordPress.orgでのプラグインのサポート：％1$s のtabby responsive tabsサポートフォーラム％2$s。"
+
+#: includes/admin.php:126
+msgid "Plugin usage"
+msgstr "プラグインの使用法"
+
+#: includes/admin.php:168 includes/admin.php:178 includes/admin.php:188
+#: includes/admin.php:198 includes/admin.php:207
+msgid "Purchase add-on"
+msgstr "アドオンを購入する"
+
+#: includes/admin.php:216
+msgid "Request quote"
+msgstr "リクエスト引用"
+
+#: tabby-responsive-tabs.php:98
+msgid "Review"
+msgstr "レビュー"
+
+#: tabby-responsive-tabs.php:100
+msgid "Settings"
+msgstr "設定"
+
+#: tabby-responsive-tabs.php:96
+msgid "Support"
+msgstr "サポート"
+
+#: includes/admin.php:83
+msgid "Tab title element (default: H2)"
+msgstr "タブタイトル要素（デフォルト：H2）"
+
+#. Plugin Name of the plugin
+msgid "Tabby Responsive Tabs"
+msgstr "Tabby Responsive Tabs"
+
+#: includes/admin.php:118
+msgid "Thank you!"
+msgstr "ありがとう！"
+
+#: includes/admin.php:195
+msgid "The tab display (desktop view) is unaffected."
+msgstr "タブ表示（デスクトップビュー）は影響を受けません。"
+
+#: includes/admin.php:129
+#| msgid ""
+#| "The title parameter sets the text on the tab, the content is added "
+#| "between the shortcodes, and the '[tabbyending]' shortcode is used once "
+#| "per tabgroup and must be placed after the last tab's content."
+msgid ""
+"The title parameter sets the text on the tab, the content is added between "
+"the shortcodes, and the [tabbyending] shortcode is used once per tabgroup "
+"and must be placed after the last tab's content."
+msgstr ""
+"titleパラメータはタブのテキストを設定し、コンテンツはショートコードの間に追加されます。 [tabbyending] "
+"ショートコードはタブグループごとに1回使用され、最後のタブのコンテンツの後に配置する必要があります。"
+
+#. translators: [tabby],[tabbyending]
+#: includes/admin.php:128
+msgid ""
+"There are two shortcodes which should both be used, %1$s and %2$s. These are "
+"added in the visual or text editor, or within a shortcode block in the block "
+"editor."
+msgstr ""
+"両方を使用する必要がある2つのショートコード、％1$sと％2$sがあります。これらは、ビジュアルエディタまたはテキストエディタ、あるいはブロックエディタのショートコードブロック内に追加されます。"
+
+#: includes/admin.php:185
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby link to "
+"tab' add-on as each one has a different purpose."
+msgstr "このアドオンは、それぞれ目的が異なるため、同様の名前の「Tabby link to tab」アドオンと混同しないでください。"
+
+#: includes/admin.php:175
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby tab to "
+"url link' add-on as each one has a different purpose."
+msgstr "このアドオンは、それぞれ目的が異なるため、同様の名前の「Tabby tab to url link」アドオンと混同しないでください。"
+
+#: includes/admin.php:194
+msgid ""
+"This changes the default behaviour for the accordion so no tab content is "
+"shown when the page is initially loaded."
+msgstr "これにより、アコーディオンのデフォルトの動作が変更され、ページが最初にロードされたときにタブコンテンツが表示されなくなります。"
+
+#: includes/admin.php:204
+#| msgid ""
+#| "This enables the currently active tab in a 'tabby responsive tabs' "
+#| "tabgroup to remain the active (open) tab after the page has been "
+#| "reloaded/refreshed."
+msgid ""
+"This enables the currently active tab in a tabby responsive tabs tabgroup to "
+"remain the active (open) tab after the page has been reloaded/refreshed."
+msgstr ""
+"これにより、tabby responsive "
+"tabsタブグループ内の現在アクティブなタブは、ページがリロード/更新された後もアクティブな（開いている）タブのままになります。"
+
+#: includes/admin.php:213
+msgid ""
+"This is a bespoke service to provide a custom-made add-on plugin to extend "
+"tabby responsive tabs or load a custom tabs stylesheet created to meet your "
+"exact requirements."
+msgstr ""
+"これは、タブビーレスポンシブタブを拡張したり、正確な要件を満たすために作成されたカスタムタブスタイルシートをロードしたりするためのカスタムメイドのアドオンプラグインを提供するオーダーメイドのサービスです。"
+
+#: includes/admin.php:138
+msgid "This is the content of the first tab."
+msgstr "これは最初のタブの内容です。"
+
+#: includes/admin.php:143
+msgid "This is the content of the second tab."
+msgstr "これは2番目のタブの内容です。"
+
+#: includes/admin.php:148
+msgid "This is the content of the third tab."
+msgstr "これは3番目のタブの内容です。"
+
+#: includes/admin.php:174
+msgid ""
+"This shortcode creates a link to a tab on the same page, where selecting the "
+"link does not cause the page to reload."
+msgstr "このショートコードは、同じページのタブへのリンクを作成します。リンクを選択しても、ページはリロードされません。"
+
+#: includes/admin.php:110
+msgid "To customise how your tabs display, either:"
+msgstr "タブの表示方法をカスタマイズするには、次のいずれかを行います。"
+
+#. translators: Link to the tabby stylesheet
+#: includes/admin.php:114
+#| msgid ""
+#| "Uncheck the option above, copy the css rules from the %1$stabby "
+#| "stylesheet%2$s into either your child theme's stylesheet or the custom "
+#| "css section of the WordPress customizer, and edit the css there."
+msgid ""
+"Uncheck the option above, copy the css rules from the %1$stabby "
+"stylesheet%2$s into either your child theme's stylesheet or the custom css "
+"section of the WordPress customizer, and make any required edits to that "
+"copy of the css."
+msgstr ""
+"上記のオプションのチェックを外し、cssルールを％1$stabbyスタイルシート％2$sから子テーマのスタイルシートまたはWordPressカスタマイザーのカスタムcssセクションにコピーし、cssのそのコピーに必要な編集を加えます。"
+
+#: includes/admin.php:53
+msgid "You do not have sufficient permissions to access this page."
+msgstr "このページにアクセスするための十分な権限がありません。"

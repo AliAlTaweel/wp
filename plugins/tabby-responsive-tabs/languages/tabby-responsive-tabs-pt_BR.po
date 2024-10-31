@@ -1,0 +1,396 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tabby Responsive Tabs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 12:15+0000\n"
+"PO-Revision-Date: 2022-04-10 20:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.0; wp-5.9.2\n"
+"X-Domain: tabby-responsive-tabs"
+
+#: includes/admin.php:165
+msgid ""
+"A collection of one-click presets can be used as an easy starting point for "
+"further customisation."
+msgstr ""
+"Uma coleção de predefinições de um clique pode ser usada como um ponto de "
+"partida fácil para uma personalização adicional."
+
+#: includes/admin.php:212
+msgid "A custom plugin specifically for your site"
+msgstr "Um plugin personalizado especificamente para o seu site"
+
+#: includes/admin.php:184
+#| msgid ""
+#| "A tab can be specified within a 'tabby responsive tabs' tabgroup so that "
+#| "it opens a link to any URL."
+msgid ""
+"A tab can be specified within a tabby responsive tabs tabgroup so that it "
+"opens a link to any URL."
+msgstr ""
+"Uma guia pode ser especificada dentro de um grupo de guias tabby responsive "
+"tabs para que ela abra um link para qualquer URL."
+
+#: includes/admin.php:164
+msgid ""
+"All customisations are made using a simple point & click interface without "
+"the need to edit any code."
+msgstr ""
+"Todas as personalizações são feitas usando uma interface simples de apontar "
+"e clicar sem a necessidade de editar nenhum código."
+
+#: includes/admin.php:115
+msgid ""
+"Alternatively the optional 'Tabby responsive tabs customiser' add-on can be "
+"used to customise the tab design without any code editing."
+msgstr ""
+"Como alternativa, o complemento opcional 'Tabby responsive tabs customiser' "
+"pode ser usado para personalizar o design da guia sem qualquer edição de "
+"código."
+
+#: includes/admin.php:193
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' that keeps all sections of the "
+#| "accordion closed on page load."
+msgid ""
+"An add-on for tabby responsive tabs that keeps all sections of the accordion "
+"closed on page load."
+msgstr ""
+"Um complemento para tabby responsive tabs que mantém todas as seções do "
+"acordeão fechadas no carregamento da página."
+
+#: includes/admin.php:203
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' to keep the currently active tab "
+#| "open after a reload."
+msgid ""
+"An add-on for tabby responsive tabs to keep the currently active tab open "
+"after a reload."
+msgstr ""
+"Um complemento para tabby responsive tabs para manter a guia ativa no "
+"momento aberta após um recarregamento."
+
+#: includes/admin.php:173
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which adds a '[tabbylink]' "
+#| "shortcode."
+msgid "An add-on for tabby responsive tabs which adds a [tabbylink] shortcode."
+msgstr ""
+"Um complemento para tabby responsive tabs que adiciona um código de acesso "
+"[tabbylink]."
+
+#: includes/admin.php:163
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which allows you to easily "
+#| "customise your tabs."
+msgid ""
+"An add-on for tabby responsive tabs which allows you to easily customise "
+"your tabs."
+msgstr ""
+"Um complemento para tabby responsive tabs que permite personalizar "
+"facilmente suas guias."
+
+#: includes/admin.php:183
+#| msgid ""
+#| "An add-on for 'tabby responsive tabs' which enables a tab to act as a "
+#| "link to any URL."
+msgid ""
+"An add-on for tabby responsive tabs which enables a tab to act as a link to "
+"any URL."
+msgstr ""
+"Um complemento para tabby responsive tabs que permite que uma guia atue como "
+"um link para qualquer URL."
+
+#. translators: Developer name: cubecolour
+#: includes/admin.php:59
+msgid "by %1$s"
+msgstr "por %1$s"
+
+#. Description of the plugin
+msgid ""
+"Create responsive tabs inside your posts, pages or custom post types by "
+"adding simple shortcodes."
+msgstr ""
+"Crie guias responsivas dentro de suas postagens, páginas ou tipos de "
+"postagem personalizados adicionando códigos de acesso simples."
+
+#. Author of the plugin
+msgid "cubecolour"
+msgstr "cubecolour"
+
+#: tabby-responsive-tabs.php:99
+msgid "Cubecolour on twitter"
+msgstr "Cubecolour no twitter"
+
+#: includes/admin.php:211
+msgid "Custom styles or functionality"
+msgstr "Estilos ou funcionalidades personalizadas"
+
+#: includes/admin.php:65
+msgid "Default stylesheet"
+msgstr "Folha de estilo padrão"
+
+#: tabby-responsive-tabs.php:97
+msgid "Donate"
+msgstr "Doar"
+
+#: includes/admin.php:96
+msgid "Font Awesome icon style"
+msgstr "Estilo de ícone de Font Awesome"
+
+#. Author URI of the plugin
+msgid "https://cubecolour.co.uk"
+msgstr "https://cubecolour.co.uk"
+
+#. Plugin URI of the plugin
+msgid "https://cubecolour.co.uk/tabby-responsive-tabs"
+msgstr "https://cubecolour.co.uk/tabby-responsive-tabs"
+
+#. translators: Link to the developer website, link to the reviews page
+#: includes/admin.php:120
+#| msgid ""
+#| "If this plugin or has provided you with some value, or it has saved you "
+#| "some development time, please consider purchasing an add-on, or making a "
+#| "contribution to %1$sthe developer%2$s, and also consider writing a brief "
+#| "%3$sreview%2$s of the plugin."
+msgid ""
+"If this plugin or has provided you with some value, or it has saved you some "
+"development time, please consider purchasing an add-on, or making a "
+"contribution to %1$sthe developer%2$s, and writing a brief %3$sreview%2$s of "
+"the plugin."
+msgstr ""
+"Se este plug-in lhe forneceu algum valor, ou economizou algum tempo de "
+"desenvolvimento, considere comprar um complemento ou fazer uma contribuição "
+"para %1$so desenvolvedor%2$s e escrever um breve %3$srevisão%2$s do plug-in."
+
+#: includes/admin.php:66
+#| msgid ""
+#| "If you are using a custom set of 'tabby' styles in your child theme or "
+#| "elsewhere, uncheck the checkbox below to remove the default 'tabby' "
+#| "stylesheet."
+msgid ""
+"If you are using a custom set of tabby styles in your child theme or "
+"elsewhere, uncheck the checkbox below to remove the default tabby stylesheet."
+msgstr ""
+"Se você estiver usando um conjunto personalizado de estilos tabby em seu "
+"tema filho ou em outro lugar, desmarque a caixa de seleção abaixo para "
+"remover a folha de estilo tabby padrão."
+
+#. translators: Link to the official font awesome plugin on WordPress.org
+#: includes/admin.php:68
+msgid ""
+"If you are using the official %1$sfont awesome plugin%2$s to add icon "
+"support, you can choose the icon style to be used in tab titles. Only "
+"regular and solid icons are available in font awesome free."
+msgstr ""
+"Se você estiver usando o plug-in oficial %1$sFont Awesome%2$s para adicionar "
+"suporte a ícones, você pode escolher o estilo de ícone a ser usado nos "
+"títulos das guias. Apenas ícones regulares e sólidos estão disponíveis em "
+"font awesome free."
+
+#. translators: <pre> tags
+#: includes/admin.php:132
+msgid ""
+"If you copy & paste the following shortcodes into your visual editor, be "
+"sure to delete any %1$s tags surrounding the content."
+msgstr ""
+"Se você copiar e colar os seguintes códigos de acesso em seu editor visual, "
+"certifique-se de excluir todas as tags %1$s ao redor do conteúdo."
+
+#: includes/admin.php:79
+#| msgid "Include the default 'tabby' stylesheet:"
+msgid "Include the default tabby stylesheet:"
+msgstr "Inclua a folha de estilo padrão tabby:"
+
+#: includes/admin.php:130
+msgid ""
+"It is recommended to leave a blank line between each shortcode and block of "
+"content."
+msgstr ""
+"Recomenda-se deixar uma linha em branco entre cada shortcode e bloco de "
+"conteúdo."
+
+#. translators: Link to the plugin's readme.txt file, link to the plugin's page on WordPress.org
+#: includes/admin.php:155
+msgid ""
+"Please refer to the plugin's %1$sreadme file%2$s or the WordPress.org "
+"%3$splugin page%4$s for more information."
+msgstr ""
+"Consulte o %1$sreadme file%2$s do plug-in ou a %3$splugin page%4$s do "
+"WordPress.org para obter mais informações."
+
+#. translators: Link to the plugin's support forum on WordPress.org
+#: includes/admin.php:157
+#| msgid ""
+#| "Plugin support on WordPress.org: %1$s'tabby responsive tabs' support "
+#| "forum%2$s."
+msgid ""
+"Plugin support on WordPress.org: %1$stabby responsive tabs support forum%2$s."
+msgstr ""
+"Suporte de plug-in no WordPress.org: %1$sfórum de suporte de tabby "
+"responsive tabs%2$s."
+
+#: includes/admin.php:126
+msgid "Plugin usage"
+msgstr "Uso do plug-in"
+
+#: includes/admin.php:168 includes/admin.php:178 includes/admin.php:188
+#: includes/admin.php:198 includes/admin.php:207
+msgid "Purchase add-on"
+msgstr "Comprar complemento"
+
+#: includes/admin.php:216
+msgid "Request quote"
+msgstr "Solicitar cotação"
+
+#: tabby-responsive-tabs.php:98
+msgid "Review"
+msgstr "Análise"
+
+#: tabby-responsive-tabs.php:100
+msgid "Settings"
+msgstr "Configurações"
+
+#: tabby-responsive-tabs.php:96
+msgid "Support"
+msgstr "Apoiar"
+
+#: includes/admin.php:83
+msgid "Tab title element (default: H2)"
+msgstr "Elemento de título da guia (padrão: H2)"
+
+#. Plugin Name of the plugin
+msgid "Tabby Responsive Tabs"
+msgstr "Tabby Responsive Tabs"
+
+#: includes/admin.php:118
+msgid "Thank you!"
+msgstr "Obrigado!"
+
+#: includes/admin.php:195
+msgid "The tab display (desktop view) is unaffected."
+msgstr "A exibição da guia (exibição da área de trabalho) não é afetada."
+
+#: includes/admin.php:129
+#| msgid ""
+#| "The title parameter sets the text on the tab, the content is added "
+#| "between the shortcodes, and the '[tabbyending]' shortcode is used once "
+#| "per tabgroup and must be placed after the last tab's content."
+msgid ""
+"The title parameter sets the text on the tab, the content is added between "
+"the shortcodes, and the [tabbyending] shortcode is used once per tabgroup "
+"and must be placed after the last tab's content."
+msgstr ""
+"O parâmetro title define o texto na guia, o conteúdo é adicionado entre os "
+"códigos de acesso e o código de acesso [tabbyending] é usado uma vez por "
+"grupo de guias e deve ser colocado após o conteúdo da última guia."
+
+#. translators: [tabby],[tabbyending]
+#: includes/admin.php:128
+msgid ""
+"There are two shortcodes which should both be used, %1$s and %2$s. These are "
+"added in the visual or text editor, or within a shortcode block in the block "
+"editor."
+msgstr ""
+"Existem dois códigos de acesso que devem ser usados, %1$s e %2$s. Eles são "
+"adicionados no editor visual ou de texto ou em um bloco de código de acesso "
+"no editor de blocos."
+
+#: includes/admin.php:185
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby link to "
+"tab' add-on as each one has a different purpose."
+msgstr ""
+"Este add-on não deve ser confundido com o add-on 'Tabby link to tab', de "
+"nome semelhante, pois cada um tem uma finalidade diferente."
+
+#: includes/admin.php:175
+msgid ""
+"This add-on should not be confused with the similarly named 'Tabby tab to "
+"url link' add-on as each one has a different purpose."
+msgstr ""
+"Este add-on não deve ser confundido com o add-on 'Tabby tab to url link' de "
+"nome semelhante, pois cada um tem uma finalidade diferente."
+
+#: includes/admin.php:194
+msgid ""
+"This changes the default behaviour for the accordion so no tab content is "
+"shown when the page is initially loaded."
+msgstr ""
+"Isso altera o comportamento padrão do acordeão para que nenhum conteúdo da "
+"guia seja exibido quando a página for carregada inicialmente."
+
+#: includes/admin.php:204
+#| msgid ""
+#| "This enables the currently active tab in a 'tabby responsive tabs' "
+#| "tabgroup to remain the active (open) tab after the page has been "
+#| "reloaded/refreshed."
+msgid ""
+"This enables the currently active tab in a tabby responsive tabs tabgroup to "
+"remain the active (open) tab after the page has been reloaded/refreshed."
+msgstr ""
+"Isso permite que a guia atualmente ativa em um grupo de guias guias "
+"responsivas de tabby permaneça a guia ativa (aberta) depois que a página for "
+"recarregada/atualizada."
+
+#: includes/admin.php:213
+msgid ""
+"This is a bespoke service to provide a custom-made add-on plugin to extend "
+"tabby responsive tabs or load a custom tabs stylesheet created to meet your "
+"exact requirements."
+msgstr ""
+"Este é um serviço personalizado para fornecer um plug-in complementar "
+"personalizado para estender as guias responsivas do tabby ou carregar uma "
+"folha de estilo de guias personalizadas criada para atender aos seus "
+"requisitos exatos."
+
+#: includes/admin.php:138
+msgid "This is the content of the first tab."
+msgstr "Este é o conteúdo da primeira guia."
+
+#: includes/admin.php:143
+msgid "This is the content of the second tab."
+msgstr "Este é o conteúdo da segunda guia."
+
+#: includes/admin.php:148
+msgid "This is the content of the third tab."
+msgstr "Este é o conteúdo da terceira aba."
+
+#: includes/admin.php:174
+msgid ""
+"This shortcode creates a link to a tab on the same page, where selecting the "
+"link does not cause the page to reload."
+msgstr ""
+"Este shortcode cria um link para uma guia na mesma página, onde a seleção do "
+"link não faz com que a página seja recarregada."
+
+#: includes/admin.php:110
+msgid "To customise how your tabs display, either:"
+msgstr "Para personalizar como suas guias são exibidas:"
+
+#. translators: Link to the tabby stylesheet
+#: includes/admin.php:114
+#| msgid ""
+#| "Uncheck the option above, copy the css rules from the %1$stabby "
+#| "stylesheet%2$s into either your child theme's stylesheet or the custom "
+#| "css section of the WordPress customizer, and edit the css there."
+msgid ""
+"Uncheck the option above, copy the css rules from the %1$stabby "
+"stylesheet%2$s into either your child theme's stylesheet or the custom css "
+"section of the WordPress customizer, and make any required edits to that "
+"copy of the css."
+msgstr ""
+"Desmarque a opção acima, copie as regras css da %1$stabby stylesheet%2$s na "
+"folha de estilo do seu tema filho ou na seção CSS personalizada do "
+"personalizador do WordPress e faça as edições necessárias nessa cópia do css."
+
+#: includes/admin.php:53
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Você não tem permissões suficientes para acessar esta página."
