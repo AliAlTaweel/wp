@@ -88,6 +88,23 @@ document.addEventListener("DOMContentLoaded", function() {
     // Automatically load events for the first year (2008) by default
 
 });
+ // Fetch all events on initial load
+ fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      action:   
+ "filter_events",
+      year: null // No specific year, fetch all
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("event-list").innerHTML = data.events;
+    document.getElementById("place-list").innerHTML = data.places;
+    attachPlaceClickEvents();
+  })
+  .catch(error => console.error("Error:", error));
 </script>
 
 <?php get_footer(); ?>

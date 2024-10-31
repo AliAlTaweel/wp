@@ -38,26 +38,7 @@ function register_year_taxonomy() {
             wp_insert_term($i, 'year');
         }
     }
-}
-add_action('init', 'register_year_taxonomy');
 
-
-// ========= great Date taxonomy  ===============
-// Register custom taxonomy 'Event Dates' for 'custom_info' post type
-function register_event_dates_taxonomy() {
-    register_taxonomy('event_dates', 'custom_info', array(
-        'labels' => array(
-            'name' => __('Event Dates'),
-            'singular_name' => __('Event Date')
-        ),
-        'public' => true,
-        'hierarchical' => true,
-        'rewrite' => array('slug' => 'event-dates'),
-    ));
-}
-add_action('init', 'register_event_dates_taxonomy');
-// ========= great Place taxonomy  ===============
-function create_custom_taxonomy() {
     register_taxonomy(
         'Place',
         'custom_info',
@@ -70,7 +51,7 @@ function create_custom_taxonomy() {
 
     // Add predefined categories
     $categories = array('Valtakunnallinen perusohjelma', 
-    'Muut valtakunnalliset', 'Paikkalliset UUsimaa',
+    'Muut valtakunnalliset', 'Paikkalliset Uusimaa',
      'Paikkallliset Päijät-Häme', 'Paikalliset Pirkanmaa',
       'Paikalliset Pohjanmaa', 'Paikalliset Lounais-Suomi');
     
@@ -80,7 +61,11 @@ function create_custom_taxonomy() {
         }
     }
 }
-add_action('init', 'create_custom_taxonomy');
+add_action('init', 'register_year_taxonomy');
+
+// ================ Taxonomies Ends ==================
+
+// ================ Add Menus ==================
 
 function theme_register_menus() {
     register_nav_menu('top-menu', __('Top Menu'));
@@ -89,25 +74,19 @@ add_action('init', 'theme_register_menus');
 
 
 
-// ========= handle AJAX =================
-// Add AJAX action for logged-in and guest users
-add_action('wp_ajax_filter_events', 'filter_events');
-add_action('wp_ajax_nopriv_filter_events', 'filter_events');
-
-// Fetch and display Organizer in the AJAX table
-// Fetch and display Organizer and Event Details in the AJAX table
-
-// before change   01 
 function filter_events(): void {
     $selected_year = isset($_POST['year']) ? intval($_POST['year']) : null;
     $selected_place_id = isset($_POST['place_id']) ? intval($_POST['place_id']) : null;
 
     $args = array(
         'post_type' => 'custom_info',
-        'posts_per_page' => 10, // Retrieve all events
+        'posts_per_page' => -1, // Retrieve all events
+        'meta_key' => 'start_date',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC' // Change to 'DESC' for descending order
     );
 
-    // Add meta query for year filtering only if a year is selected
+    // If no year is specified, don't add meta query for year filtering
     if ($selected_year) {
         $args['meta_query'] = array(
             array(
@@ -200,10 +179,13 @@ function filter_events(): void {
 
     wp_die();
 }
+// ========= handle AJAX =================
+// Add AJAX action for logged-in and guest users
+add_action('wp_ajax_filter_events', 'filter_events');
+add_action('wp_ajax_nopriv_filter_events', 'filter_events');
 
-
-
-
+// Fetch and display Organizer in the AJAX table
+// Fetch and display Organizer and Event Details in the AJAX table
 
 
 function enqueue_ajax_script() {
@@ -215,11 +197,6 @@ function enqueue_ajax_script() {
 add_action('wp_enqueue_scripts', 'enqueue_ajax_script');
 
 
-// ========= To force wordpress to take last version of style.css ==========
-function my_theme_enqueue_styles() {
-    wp_enqueue_style('main-styles', get_stylesheet_uri(), array(), time());
-}
-add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
 // ================ add orginaizer names ==============
 // ========== Add Organizer Dropdown in Event Post Type ==========
@@ -277,7 +254,7 @@ function save_organizer_metabox_data($post_id) {
 add_action('save_post', 'save_organizer_metabox_data');
 
 //==============================================================
-// ================ add oresponsible names ==============
+// ================ add responsible names ==============
 // ========== Add responsible Dropdown in Event Post Type ==========
 
 // Define a list of responsible names
@@ -332,36 +309,9 @@ function save_responsible_metabox_data($post_id) {
 }
 add_action('save_post', 'save_organizer_metabox_data');
 //==============================================================
-// Add AJAX action for loading places
-add_action('wp_ajax_load_places', 'load_places');
-add_action('wp_ajax_nopriv_load_places', 'load_places');
 
-function load_places() {
-    $selected_year = isset($_POST['year']) ? intval($_POST['year']) : null;
 
-    // Query places
-    $places = get_terms(array(
-        'taxonomy' => 'Place',
-        'hide_empty' => true,
-    ));
 
-    ob_start();
-    echo '<h3>Select Place:</h3>';
-    echo '<ul>';
-    
-    foreach ($places as $place) {
-        echo '<li>';
-        echo '<a href="#" class="place-link" data-place="' . esc_attr($place->slug) . '">';
-        echo esc_html($place->name);
-        echo '</a>';
-        echo '</li>';
-    }
-    
-    echo '</ul>';
-    
-    echo ob_get_clean();
-    wp_die();
-}
 
 // Modify the filter_events function to handle events by place
 add_action('wp_ajax_filter_events_by_place', 'filter_events_by_place');
@@ -444,10 +394,15 @@ function filter_events_by_place() {
 
     echo '</tbody>';
     echo '</table>';
-
+    
     wp_reset_postdata();
-
+    
     echo ob_get_clean();
     wp_die();
 }
-// ================= Add Time plugin ==================
+// =================  ==================
+// ========= To force wordpress to take last version of style.css ==========
+function my_theme_enqueue_styles() {
+    wp_enqueue_style('main-styles', get_stylesheet_uri(), array(), time());
+}
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
