@@ -89,7 +89,6 @@ function theme_register_menus() {
 add_action('init', 'theme_register_menus');
 
 
-
 // ========= handle JQUERY =================
 // Add AJAX action for logged-in and guest users
 add_action('wp_ajax_filter_events', 'filter_events');
@@ -179,11 +178,6 @@ function filter_events() {
 
     wp_die();
 }
-
-
-
-
-
 
 function enqueue_ajax_script() {
     // Localize the script with the new AJAX URL
