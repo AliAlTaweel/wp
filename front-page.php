@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
         link.addEventListener("click", function(event) {
             event.preventDefault(); // Prevent the default link behavior
 
+            // Remove active class from all links and add to the clicked one
+            yearLinks.forEach(l => l.classList.remove("active"));
+            this.classList.add("active");
+
             const year = this.getAttribute("data-year");
 
             // Send AJAX request to load events and places for the selected year
@@ -86,25 +90,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Automatically load events for the first year (2008) by default
-
-});
- // Fetch all events on initial load
- fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({
-      action:   
- "filter_events",
-      year: null // No specific year, fetch all
+    fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+            action: "filter_events",
+          
+        })
     })
-  })
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById("event-list").innerHTML = data.events;
-    document.getElementById("place-list").innerHTML = data.places;
-    attachPlaceClickEvents();
-  })
-  .catch(error => console.error("Error:", error));
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("event-list").innerHTML = data.events;
+        document.getElementById("place-list").innerHTML = data.places;
+        attachPlaceClickEvents();
+    })
+    .catch(error => console.error("Error:", error));
+});
 </script>
-
 <?php get_footer(); ?>

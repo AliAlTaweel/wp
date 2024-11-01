@@ -406,3 +406,51 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style('main-styles', get_stylesheet_uri(), array(), time());
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+// ============================    ==========================
+
+// Add meta boxes for start and end date
+function add_event_date_meta_boxes() {
+    add_meta_box(
+        'event_date_meta_box', // ID of the meta box
+        __('Event Date & Time'), // Title of the meta box
+        'event_date_meta_box_callback', // Callback function to display content
+        'custom_info', // Post type
+        'normal', // Location of the meta box
+        'high' // Priority
+    );
+}
+add_action('add_meta_boxes', 'add_event_date_meta_boxes');
+
+// Callback function to display the meta box
+function event_date_meta_box_callback($post) {
+    // Retrieve existing values
+    $start_date = get_post_meta($post->ID, 'start_date', true);
+    $end_date = get_post_meta($post->ID, 'end_date', true);
+    ?>
+    <label for="start_date"><?php _e('Start Date and Time:', 'text_domain'); ?></label>
+    <input type="datetime-local" id="start_date" name="start_date" value="<?php echo esc_attr($start_date); ?>" />
+
+    <br><br>
+
+    <label for="end_date"><?php _e('End Date and Time:', 'text_domain'); ?></label>
+    <input type="datetime-local" id="end_date" name="end_date" value="<?php echo esc_attr($end_date); ?>" />
+    <?php
+}
+
+// Save the start and end date
+function save_event_date_meta_box_data($post_id) {
+    // Verify nonce and permissions
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
+
+    // Save the start date
+    if (isset($_POST['start_date'])) {
+        update_post_meta($post_id, 'start_date', sanitize_text_field($_POST['start_date']));
+    }
+
+    // Save the end date
+    if (isset($_POST['end_date'])) {
+        update_post_meta($post_id, 'end_date', sanitize_text_field($_POST['end_date']));
+    }
+}
+add_action('save_post', 'save_event_date_meta_box_data');
