@@ -112,6 +112,7 @@ function filter_events(): void {
     $query = new WP_Query($args);
 
     ob_start();
+   
 
     // Start output with table structure
     echo '<table class="event-table">';
@@ -167,7 +168,8 @@ function filter_events(): void {
 
     $places_output = '<h3>Places:</h3><ul>';
     foreach ($places as $place) {
-        $places_output .= '<li><a href="#" class="place-link" data-place="' . esc_attr($place->term_id) . '">' . esc_html($place->name) . '</a></li>';
+        $places_output .= '<li><a href="#" class="place-link" data-place="'
+         . esc_attr($place->term_id) . '">' . esc_html($place->name) . '</a></li>';
     }
     $places_output .= '</ul>';
 

@@ -59,35 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Function to attach click events to places
-    function attachPlaceClickEvents() {
-        const placeLinks = document.querySelectorAll(".place-link");
-        placeLinks.forEach(link => {
-            link.addEventListener("click", function(event) {
-                event.preventDefault(); // Prevent default link behavior
-
-                const placeId = this.getAttribute("data-place");
-
-                // Get the currently selected year
-                const year = document.querySelector(".year-link.active")?.getAttribute("data-year");
-
-                // Send AJAX request for events by place
-                fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams({
-                        action: "filter_events_by_place",
-                        place_id: placeId,
-                        year: year // Include the selected year in the request
-                    })
-                })
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("event-list").innerHTML = data;
-                })
-                .catch(error => console.error("Error:", error));
-            });
-        });
-    }
+   
 
     // Automatically load events for the first year (2008) by default
     fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
@@ -106,5 +78,104 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .catch(error => console.error("Error:", error));
 });
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+            action: "filter_events",
+            year: selectedYear,  // Replace selectedYear with the actual selected year variable
+            place: selectedPlace  // Optional place filter
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        const eventContainer = document.getElementById("event-list");
+        eventContainer.innerHTML = '';  // Clear previous results
+
+        for (const place in data.events) {
+            const events = data.events[place];
+            const table = document.createElement("table");
+            table.classList.add("event-table");
+
+            table.innerHTML = `
+                <thead>
+                    <tr><th colspan="6">${place}</th></tr>
+                    <tr>
+                        <th>Tapahtuma</th>
+                        <th>Details</th>
+                        <th>Alku Päivä</th>
+                        <th>Loppu Päivä</th>
+                        <th>Vastuulliset</th>
+                        <th>Mentor</th>
+                    </tr>
+                </thead>
+            `;
+
+            const tbody = document.createElement("tbody");
+            events.forEach(event => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${event.name}</td>
+                    <td>${event.details}</td>
+                    <td>${event.start_date}</td>
+                    <td>${event.end_date}</td>
+                    <td>${event.responsible}</td>
+                    <td>${event.mentor}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+            eventContainer.appendChild(table);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+});
+function attachPlaceClickEvents() {
+    const placeLinks = document.querySelectorAll(".place-link");
+    placeLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            // Toggle the active class for the clicked place link
+            if (this.classList.contains("active")) {
+                // If the link is already active, remove the active class
+                this.classList.remove("active");
+            } else {
+                // If it's not active, first remove active from any other link, then add it to the clicked one
+                placeLinks.forEach(l => l.classList.remove("active"));
+                this.classList.add("active");
+            }
+
+            // Optional: Additional functionality when a place is selected
+            const placeId = this.getAttribute("data-place");
+
+            // Get the currently selected year, if any
+            const year = document.querySelector(".year-link.active")?.getAttribute("data-year");
+
+            // Send AJAX request for events by place if needed (only if a place is selected)
+            if (this.classList.contains("active")) {
+                fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams({
+                        action: "filter_events_by_place",
+                        place_id: placeId,
+                        year: year // Include the selected year in the request
+                    })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("event-list").innerHTML = data;
+                })
+                .catch(error => console.error("Error:", error));
+            } else {
+                // Clear the event list if the place is deselected
+                document.getElementById("event-list").innerHTML = "";
+            }
+        });
+    });
+}
 </script>
 <?php get_footer(); ?>
