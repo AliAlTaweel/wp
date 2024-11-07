@@ -80,13 +80,13 @@ function filter_events(): void {
 
     $args = array(
         'post_type' => 'custom_info',
-        'posts_per_page' => -1, // Retrieve all events
+        'posts_per_page' => -1,
         'meta_key' => 'start_date',
-    'orderby' => 'meta_value_num',
-    'order' => 'ASC' // Change to 'DESC' for descending order
+        'orderby' => 'meta_value_num',
+        'order' => 'ASC'
     );
 
-    // If no year is specified, don't add meta query for year filtering
+    // Filter by year if a year is specified
     if ($selected_year) {
         $args['meta_query'] = array(
             array(
@@ -98,7 +98,7 @@ function filter_events(): void {
         );
     }
 
-    // Add tax query for place filtering only if a place is selected
+    // Filter by place if a specific place is selected
     if ($selected_place_id) {
         $args['tax_query'] = array(
             array(
@@ -110,57 +110,68 @@ function filter_events(): void {
     }
 
     $query = new WP_Query($args);
+    $events_by_place = [];
 
-    ob_start();
-   
-
-    // Start output with table structure
-    echo '<table class="event-table">';
-    echo '<thead>';
-    echo '<tr>';
-    echo '<th>Tapahtuma</th>';
-    echo '<th>Details</th>';
-    echo '<th>Paikka</th>';
-    echo '<th>Alku Päivä</th>';
-    echo '<th>Loppu Päivä</th>';
-    echo '<th>Vastuulliset</th>';
-    echo '<th>Mentor</th>';
-    echo '</tr>';
-    echo '</thead>';
-    echo '<tbody>';
-
+    // Group events by their associated places
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
+            $place_terms = get_the_terms(get_the_ID(), 'Place');
             
-            $start_date = get_post_meta(get_the_ID(), 'start_date', true);
-            $end_date = get_post_meta(get_the_ID(), 'end_date', true);
-            $formatted_start_date = date('d.m.Y', strtotime($start_date));
-            $formatted_end_date = date('d.m.Y', strtotime($end_date));
+            if ($place_terms && !is_wp_error($place_terms)) {
+                foreach ($place_terms as $place) {
+                    $events_by_place[$place->name][] = array(
+                        'title' => get_the_title(),
+                        'details' => wp_trim_words(get_the_content(), 20, '...'),
+                        'start_date' => date('d.m.Y', strtotime(get_post_meta(get_the_ID(), 'start_date', true))),
+                        'end_date' => date('d.m.Y', strtotime(get_post_meta(get_the_ID(), 'end_date', true))),
+                        'responsible' => get_post_meta(get_the_ID(), '_responsible_name', true),
+                        'organizer' => get_post_meta(get_the_ID(), '_organizer_name', true)
+                    );
+                }
+            }
+        }
+    }
+    wp_reset_postdata();
 
-            $place = get_the_terms(get_the_ID(), 'Place');
-            $responsible = get_post_meta(get_the_ID(), '_responsible_name', true);
-            $organizer = get_post_meta(get_the_ID(), '_organizer_name', true);
-            $details = get_the_content(); // Retrieve the event details
+    ob_start();
 
+    // Output events grouped by place in a table format
+    if (!empty($events_by_place)) {
+        foreach ($events_by_place as $place_name => $events) {
+            echo '<h2>' . esc_html($place_name) . '</h2>';
+            echo '<table class="event-table">';
+            echo '<thead>';
             echo '<tr>';
-            echo '<td>' . esc_html(get_the_title()) . '</td>';
-            echo '<td>' . wp_trim_words(esc_html($details), 20, '...') . '</td>'; // Show first 20 words of details
-            echo '<td>' . ($place ? esc_html($place[0]->name) : 'N/A') . '</td>';
-            echo '<td>' . esc_html( $formatted_start_date) . '</td>';
-            echo '<td>' . esc_html( $formatted_end_date) . '</td>';
-            echo '<td>' . esc_html($responsible) . '</td>';
-            echo '<td>' . esc_html($organizer) . '</td>';
+            echo '<th>Tapahtuma</th>';
+            echo '<th>Details</th>';
+            echo '<th>Alku Päivä</th>';
+            echo '<th>Loppu Päivä</th>';
+            echo '<th>Vastuulliset</th>';
+            echo '<th>Mentor</th>';
             echo '</tr>';
+            echo '</thead>';
+            echo '<tbody>';
+
+            foreach ($events as $event) {
+                echo '<tr>';
+                echo '<td>' . esc_html($event['title']) . '</td>';
+                echo '<td>' . esc_html($event['details']) . '</td>';
+                echo '<td>' . esc_html($event['start_date']) . '</td>';
+                echo '<td>' . esc_html($event['end_date']) . '</td>';
+                echo '<td>' . esc_html($event['responsible']) . '</td>';
+                echo '<td>' . esc_html($event['organizer']) . '</td>';
+                echo '</tr>';
+            }
+
+            echo '</tbody>';
+            echo '</table>';
         }
     } else {
-        echo '<tr><td colspan="7">No events found for this year.</td></tr>';
+        echo '<p>No events found for this selection.</p>';
     }
 
-    echo '</tbody>';
-    echo '</table>';
-
-    // Fetch Places
+    // Generate the list of places for the sidebar
     $places = get_terms(array(
         'taxonomy' => 'Place',
         'hide_empty' => false,
@@ -169,11 +180,11 @@ function filter_events(): void {
     $places_output = '<h3>Places:</h3><ul>';
     foreach ($places as $place) {
         $places_output .= '<li><a href="#" class="place-link" data-place="'
-         . esc_attr($place->term_id) . '">' . esc_html($place->name) . '</a></li>';
+            . esc_attr($place->term_id) . '">' . esc_html($place->name) . '</a></li>';
     }
     $places_output .= '</ul>';
 
-    // Return as JSON
+    // Send the output as JSON
     wp_send_json(array(
         'events' => ob_get_clean(),
         'places' => $places_output,
@@ -320,85 +331,97 @@ add_action('wp_ajax_filter_events_by_place', 'filter_events_by_place');
 add_action('wp_ajax_nopriv_filter_events_by_place', 'filter_events_by_place');
 
 function filter_events_by_place() {
-    $selected_place_id = isset($_POST['place_id']) ? intval($_POST['place_id']) : null;
     $selected_year = isset($_POST['year']) ? intval($_POST['year']) : null;
 
-    $args = array(
-        'post_type' => 'custom_info',
-        'posts_per_page' => -1, // Retrieve all events for the selected place
-        'meta_query' => array()
-    );
-
-    if ($selected_year) {
-        $args['meta_query'][] = array(
-            'key' => 'start_date',
-            'value' => array($selected_year . '-01-01', $selected_year . '-12-31'),
-            'compare' => 'BETWEEN',
-            'type' => 'DATE'
-        );
-    }
-
-    if ($selected_place_id) {
-        $args['tax_query'] = array(
-            array(
-                'taxonomy' => 'Place',
-                'field' => 'term_id',
-                'terms' => $selected_place_id,
-            ),
-        );
-    }
-
-    $query = new WP_Query($args);
+    // Fetch all places
+    $places = get_terms(array(
+        'taxonomy' => 'Place',
+        'hide_empty' => false,
+    ));
 
     ob_start();
 
-    // Start output with table structure
-    echo '<table class="event-table">';
-    echo '<thead>';
-    echo '<tr>';
-    echo '<th>Event</th>';
-    echo '<th>Details</th>';
-    echo '<th>Place</th>';
-    echo '<th>Start Date</th>';
-    echo '<th>End Date</th>';
-    echo '<th>Vastuulliset</th>';
-    echo '<th>Mentor</th>';
-    echo '</tr>';
-    echo '</thead>';
-    echo '<tbody>';
+    // Loop through each place and get events for each one
+    foreach ($places as $place) {
+        // Display the place name as a heading
+        echo '<h2>' . esc_html($place->name) . '</h2>';
 
-    if ($query->have_posts()) {
-        while ($query->have_posts()) {
-            $query->the_post();
-            $start_date = get_post_meta(get_the_ID(), 'start_date', true);
-            $end_date = get_post_meta(get_the_ID(), 'end_date', true);
-            $formatted_start_date = date('d.m.Y', strtotime($start_date));
-            $formatted_end_date = date('d.m.Y', strtotime($end_date));
+        // Set up the query arguments for events under this place and year
+        $args = array(
+            'post_type' => 'custom_info',
+            'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'Place',
+                    'field' => 'term_id',
+                    'terms' => $place->term_id,
+                ),
+            ),
+            'meta_query' => array(),
+            'orderby' => 'meta_value_num',
+            'meta_key' => 'start_date',
+            'order' => 'ASC',
+        );
 
-            $place = get_the_terms(get_the_ID(), 'Place');
-            $responsible = get_post_meta(get_the_ID(), '_responsible_name', true);
-            $organizer = get_post_meta(get_the_ID(), '_organizer_name', true);
-            $details = get_the_content(); // Retrieve the event details
-
-            echo '<tr>';
-            echo '<td>' . esc_html(get_the_title()) . '</td>';
-            echo '<td>' . wp_trim_words(esc_html($details), 20, '...') . '</td>'; // Show first 20 words of details
-            echo '<td>' . ($place ? esc_html($place[0]->name) : 'N/A') . '</td>';
-            echo '<td>' . esc_html( $formatted_start_date) . '</td>';
-            echo '<td>' . esc_html( $formatted_end_date) . '</td>';
-            echo '<td>' . esc_html($responsible) . '</td>';
-            echo '<td>' . esc_html($organizer) . '</td>';
-            echo '</tr>';
+        // Add year filter if selected
+        if ($selected_year) {
+            $args['meta_query'][] = array(
+                'key' => 'start_date',
+                'value' => array($selected_year . '-01-01', $selected_year . '-12-31'),
+                'compare' => 'BETWEEN',
+                'type' => 'DATE'
+            );
         }
-    } else {
-        echo '<tr><td colspan="7">No events found for this place.</td></tr>';
+
+        $query = new WP_Query($args);
+
+        // Display events table for each place
+        echo '<table class="event-table">';
+        echo '<thead>';
+        echo '<tr>';
+        echo '<th>Event</th>';
+        echo '<th>Details</th>';
+        echo '<th>Place</th>';
+        echo '<th>Start Date</th>';
+        echo '<th>End Date</th>';
+        echo '<th>Responsible</th>';
+        echo '<th>Mentor</th>';
+        echo '</tr>';
+        echo '</thead>';
+        echo '<tbody>';
+
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+
+                $start_date = get_post_meta(get_the_ID(), 'start_date', true);
+                $end_date = get_post_meta(get_the_ID(), 'end_date', true);
+                $formatted_start_date = date('d.m.Y', strtotime($start_date));
+                $formatted_end_date = date('d.m.Y', strtotime($end_date));
+
+                $responsible = get_post_meta(get_the_ID(), '_responsible_name', true);
+                $organizer = get_post_meta(get_the_ID(), '_organizer_name', true);
+                $details = get_the_content(); // Retrieve the event details
+
+                echo '<tr>';
+                echo '<td>' . esc_html(get_the_title()) . '</td>';
+                echo '<td>' . wp_trim_words(esc_html($details), 20, '...') . '</td>';
+                echo '<td>' . esc_html($place->name) . '</td>';
+                echo '<td>' . esc_html($formatted_start_date) . '</td>';
+                echo '<td>' . esc_html($formatted_end_date) . '</td>';
+                echo '<td>' . esc_html($responsible) . '</td>';
+                echo '<td>' . esc_html($organizer) . '</td>';
+                echo '</tr>';
+            }
+        } else {
+            echo '<tr><td colspan="7">No events found for this place.</td></tr>';
+        }
+
+        echo '</tbody>';
+        echo '</table>';
+        wp_reset_postdata();
     }
 
-    echo '</tbody>';
-    echo '</table>';
-    
-    wp_reset_postdata();
-    
     echo ob_get_clean();
     wp_die();
 }
@@ -456,3 +479,6 @@ function save_event_date_meta_box_data($post_id) {
     }
 }
 add_action('save_post', 'save_event_date_meta_box_data');
+
+//===========================
+

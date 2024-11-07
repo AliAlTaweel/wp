@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to attach click events to places
    
 
-    // Automatically load events for the first year (2008) by default
+    // Automatically load events by default all years
     fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -78,60 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .catch(error => console.error("Error:", error));
 });
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-            action: "filter_events",
-            year: selectedYear,  // Replace selectedYear with the actual selected year variable
-            place: selectedPlace  // Optional place filter
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        const eventContainer = document.getElementById("event-list");
-        eventContainer.innerHTML = '';  // Clear previous results
 
-        for (const place in data.events) {
-            const events = data.events[place];
-            const table = document.createElement("table");
-            table.classList.add("event-table");
-
-            table.innerHTML = `
-                <thead>
-                    <tr><th colspan="6">${place}</th></tr>
-                    <tr>
-                        <th>Tapahtuma</th>
-                        <th>Details</th>
-                        <th>Alku Päivä</th>
-                        <th>Loppu Päivä</th>
-                        <th>Vastuulliset</th>
-                        <th>Mentor</th>
-                    </tr>
-                </thead>
-            `;
-
-            const tbody = document.createElement("tbody");
-            events.forEach(event => {
-                const row = document.createElement("tr");
-                row.innerHTML = `
-                    <td>${event.name}</td>
-                    <td>${event.details}</td>
-                    <td>${event.start_date}</td>
-                    <td>${event.end_date}</td>
-                    <td>${event.responsible}</td>
-                    <td>${event.mentor}</td>
-                `;
-                tbody.appendChild(row);
-            });
-
-            table.appendChild(tbody);
-            eventContainer.appendChild(table);
-        }
-    })
-    .catch(error => console.error("Error:", error));
-});
 function attachPlaceClickEvents() {
     const placeLinks = document.querySelectorAll(".place-link");
     placeLinks.forEach(link => {
@@ -177,5 +124,18 @@ function attachPlaceClickEvents() {
         });
     });
 }
+document.querySelectorAll('.place-link').forEach(function(icon) {
+    icon.addEventListener('click', function() {
+        // Get the table by its ID
+        const table = document.getElementByClassName('.event-table');
+        
+        // Scroll smoothly to the table
+        table.scrollIntoView({
+            behavior: 'smooth', // Smooth scrolling effect
+            block: 'start' // Scroll to the top of the table
+        });
+    });
+});
+
 </script>
 <?php get_footer(); ?>
