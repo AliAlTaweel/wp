@@ -1,143 +1,189 @@
-.home{
-    background-color: rgb(248, 244, 244);
-}
-.year-filter {
-    margin-bottom: 20px;
-}
-
-.year-filter ul {
-    list-style-type: none;
-    padding: 0;
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.year-filter li {
-    display: inline;
-    margin-right: 10px;
+body {
+  font-family: "Roboto", sans-serif; /* Unified font style */
+  background-color: #a4ac86; /* Light green background */
+  color: #1f2518; /* Dark green text */
+  margin: 0;
+  padding: 0;
 }
 
-.events {
-    margin-top: 20px;
-}
-.event-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.event-table th, .event-table td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 12px;
+#page {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.event-table th {
-    background-color: #f2f2f2; /* Light grey background for the header */
-    color: #333; /* Darker text color for header */
+/* Header styling */
+#header {
+  background-color: #1f2518; /* Dark green */
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
 }
 
-.event-table tr:nth-child(even) {
-    background-color: #f9f9f9; /* Light background for even rows */
+#header h1 {
+  font-family: "Roboto", sans-serif; /* Use Roboto for headers */
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-.event-table tr:hover {
-    background-color: #eaeaea; /* Highlight row on hover */
+#header a {
+  color: #e2c275; /* Gold */
+  text-decoration: none;
 }
 
-.event-table td {
-    vertical-align: top; /* Align text to the top of the cell */
+#header a:hover {
+  color: #a4ac86; /* Light green hover */
 }
 
-.year-filter {
-    margin-bottom: 20px; /* Add space below the year filter */
-}
-
-.year-filter ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
-}
-
-.year-filter li {
-    display: inline; /* Display years in a line */
-    margin-right: 15px; /* Space between years */
-}
-
-.year-link {
-    text-decoration: none; /* Remove underline from links */
-    color: #0073aa; /* Change link color */
-}
-
-.year-link:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
+/* Filter styling */
+.year-filter,
 #place-list {
-    margin: 20px 0; /* Adds some space above and below the places list */
+  margin: 20px 0; /* Vertical spacing between filters */
+  padding: 15px; /* Increased padding for larger block size */
+  border: 2px solid #5a6142; /* Styled border from style guide */
+  border-radius: 8px;
+  background-color: #f8f8f2; /* Light background */
 }
 
+.year-filter h3,
 #place-list h3 {
-    margin-bottom: 10px; /* Adds space below the heading */
+  font-size: 1rem; /* Slightly smaller headers */
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px; /* Increased bottom margin for separation */
+  color: #5a6142; /* Softer green */
+  font-weight: 600;
 }
 
+.year-filter ul,
 #place-list ul {
-    display: flex; /* Use flexbox for horizontal layout */
-    flex-wrap: wrap; /* Allows wrapping to the next line if needed */
-    list-style-type: none; /* Removes bullet points */
-    padding: 0; /* Removes padding */
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Increased gap for better vertical spacing */
 }
 
-#place-list li {
-    margin-right: 15px; /* Adds space between each place item */
-    margin-bottom: 10px; /* Adds space below each item for wrapping */
-    padding: 10px;
-}
-
+.year-filter a,
 #place-list a {
-    text-decoration: none; /* Removes underline from links */
-    color: #0073aa; /* Link color */
-    padding: 10px 15px; /* Adds padding around the link */
-    border: 1px solid #0073aa; /* Adds a border */
-    border-radius: 5px; /* Rounds the corners */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  font-size: 0.85rem; /* Compact font size */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 6px 10px; /* Adjusted padding for smaller filters */
+  border-radius: 15px;
+  background-color: #e2c275; /* Gold buttons */
+  color: #1f2518; /* Dark text for contrast */
 }
 
+.year-filter a.active,
+#place-list a.active {
+  background-color: #1f2518; /* Dark green for active state */
+  color: #ffffff;
+}
+
+.year-filter a:hover,
 #place-list a:hover {
-    background-color: #0073aa; /* Changes background color on hover */
-    color: white; /* Changes text color on hover */
-}
-.event-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+  background-color: #a4ac86; /* Light green for hover effect */
+  color: #1f2518;
 }
 
-.event-table th, .event-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.85rem; /* Compact font size */
 }
 
-.event-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+thead th {
+  background-color: #e2c275; /* Gold background */
+  color: #1f2518; /* Dark green text */
+  font-family: "Roboto", sans-serif; /* Ensure consistent font */
+  text-align: left;
+  padding: 6px; /* Compact padding */
+  border-bottom: 2px solid #5a6142; /* Styled green border */
 }
 
-.event-table thead tr:first-child th {
-    background-color: #e0e0e0;
-    text-align: left;
+tbody tr:nth-child(odd) {
+  background-color: #f0f0e8; /* Subtle light green-gray for zebra stripes */
 }
-.year-link.active {
-    background-color: rgba(0, 0, 255, 0.503);
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-}
-.place-link.active {
-    background-color: #8baa00;
-    color: rgb(250, 249, 249);
-    padding: 5px;
-    border-radius: 5px;
-}
-#place-list .active {
-    color: white;
-    background-color:rgba(0, 0, 255, 0.503);
 
+tbody tr:nth-child(even) {
+  background-color: #ffffff; /* White for alternate rows */
+}
+
+tbody tr:hover {
+  background-color: #c7d0ae; /* Less bright hover color */
+  color: #1f2518; /* Dark green text for hover */
+}
+
+td {
+  padding: 6px; /* Reduced padding for table cells */
+  border-bottom: 1px solid #d4d4d4; /* Light gray for row separation */
+}
+
+/* Section headers for tables */
+#event-list h2 {
+  font-family: "Roboto", sans-serif; /* Consistent font */
+  color: #1f2518; /* Dark green */
+  background-color: #f8f8f2; /* Light background */
+  padding: 10px;
+  border: 2px solid #5a6142; /* Styled green border */
+  border-radius: 8px;
+  margin-top: 15px;
+  margin-bottom: 20px; /* Separates from filters */
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/* Footer styling */
+#footer {
+  background-color: #1f2518; /* Dark green */
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: 5px solid #e2c275; /* Gold accent */
+}
+
+#footer a {
+  color: #e2c275;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #a4ac86; /* Light green hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  #page {
+    padding: 10px;
+  }
+
+  .year-filter ul,
+  #place-list ul {
+    flex-direction: column;
+    gap: 12px; /* Adjusted gap for smaller screens */
+  }
+
+  .year-filter a,
+  #place-list a {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
 }

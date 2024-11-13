@@ -1,10 +1,11 @@
 <?php
-/* Template Name: Front Page */
+/* Template Name: Histoiria Page */
 get_header(); 
 ?>
 
+
 <div class="year-filter">
-    <h3>Select Year:</h3>
+    <h3>Valitse Vuosi:</h3>
     <ul>
         <?php for ($year = 2008; $year <= 2024; $year++): ?>
             <li>
@@ -83,25 +84,19 @@ function attachPlaceClickEvents() {
     const placeLinks = document.querySelectorAll(".place-link");
     placeLinks.forEach(link => {
         link.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default link behavior
+            event.preventDefault();
 
             // Toggle the active class for the clicked place link
             if (this.classList.contains("active")) {
-                // If the link is already active, remove the active class
                 this.classList.remove("active");
             } else {
-                // If it's not active, first remove active from any other link, then add it to the clicked one
                 placeLinks.forEach(l => l.classList.remove("active"));
                 this.classList.add("active");
             }
 
-            // Optional: Additional functionality when a place is selected
             const placeId = this.getAttribute("data-place");
-
-            // Get the currently selected year, if any
             const year = document.querySelector(".year-link.active")?.getAttribute("data-year");
 
-            // Send AJAX request for events by place if needed (only if a place is selected)
             if (this.classList.contains("active")) {
                 fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
                     method: "POST",
@@ -109,33 +104,28 @@ function attachPlaceClickEvents() {
                     body: new URLSearchParams({
                         action: "filter_events_by_place",
                         place_id: placeId,
-                        year: year // Include the selected year in the request
+                        year: year
                     })
                 })
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("event-list").innerHTML = data;
+
+                    // Scroll to the place heading after the events load
+                    const placeHeading = document.getElementById(`place-${placeId}`);
+                    if (placeHeading) {
+                        placeHeading.scrollIntoView({ behavior: "smooth" });
+                    }
                 })
                 .catch(error => console.error("Error:", error));
             } else {
-                // Clear the event list if the place is deselected
                 document.getElementById("event-list").innerHTML = "";
             }
         });
     });
 }
-document.querySelectorAll('.place-link').forEach(function(icon) {
-    icon.addEventListener('click', function() {
-        // Get the table by its ID
-        const table = document.getElementByClassName('.event-table');
-        
-        // Scroll smoothly to the table
-        table.scrollIntoView({
-            behavior: 'smooth', // Smooth scrolling effect
-            block: 'start' // Scroll to the top of the table
-        });
-    });
-});
+
+   
 
 </script>
 <?php get_footer(); ?>
