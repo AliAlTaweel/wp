@@ -197,7 +197,7 @@ function filter_events_by_place() {
                 echo '</tr>';
             }
         } else {
-            echo '<tr><td colspan="7">No events found for this place.</td></tr>';
+            echo '<tr><td colspan="7">Tälle paikalle ei löytynyt tapahtumia.</td></tr>';
         }
 
         echo '</tbody>';
@@ -305,7 +305,7 @@ function filter_events(): void {
             echo '</table>';
         }
     } else {
-        echo '<p>No events found for this selection.</p>';
+        echo '<p>Tälle vuodelle ei löytynyt tapahtumia.</p>';
     }
 
     // Generate the list of places for the sidebar

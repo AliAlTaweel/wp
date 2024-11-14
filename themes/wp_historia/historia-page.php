@@ -5,7 +5,7 @@ get_header();
 
 
 <div class="year-filter">
-    <h3>Valitse Vuosi:</h3>
+    
     <ul>
         <?php for ($year = 2008; $year <= 2024; $year++): ?>
             <li>
