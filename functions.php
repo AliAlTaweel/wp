@@ -1,174 +1,130 @@
-/* General styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<?php
+/* Template Name: Histoiria Page */
+get_header(); 
+?>
+
+
+<div class="year-filter">
+    <ul>
+        <?php for ($year = 2008; $year <= 2024; $year++): ?>
+            <li>
+                <a href="#" class="year-link" data-year="<?php echo esc_attr($year); ?>">
+                    <?php echo esc_html($year); ?>
+                </a>
+            </li>
+        <?php endfor; ?>
+    </ul>
+</div>
+
+<div id="place-list">
+    <!-- Places will be loaded here via AJAX -->
+</div>
+
+<div id="event-list">
+    <!-- Events will be loaded here via AJAX -->
+</div>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+    const yearLinks = document.querySelectorAll(".year-link");
+
+    yearLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            // Remove active class from all links and add to the clicked one
+            yearLinks.forEach(l => l.classList.remove("active"));
+            this.classList.add("active");
+
+            const year = this.getAttribute("data-year");
+
+            // Send AJAX request to load events and places for the selected year
+            fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({
+                    action: "filter_events",
+                    year: year
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update event list and place list
+                document.getElementById("event-list").innerHTML = data.events;
+                document.getElementById("place-list").innerHTML = data.places;
+                attachPlaceClickEvents(); // Re-attach click events for places
+            })
+            .catch(error => console.error("Error:", error));
+        });
+    });
+
+    // Function to attach click events to places
+   
+
+    // Automatically load events by default all years
+    fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+            action: "filter_events",
+          
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("event-list").innerHTML = data.events;
+        document.getElementById("place-list").innerHTML = data.places;
+        attachPlaceClickEvents();
+    })
+    .catch(error => console.error("Error:", error));
+});
+
+function attachPlaceClickEvents() {
+    const placeLinks = document.querySelectorAll(".place-link");
+    placeLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            // Toggle the active class for the clicked place link
+            if (this.classList.contains("active")) {
+                this.classList.remove("active");
+            } else {
+                placeLinks.forEach(l => l.classList.remove("active"));
+                this.classList.add("active");
+            }
+
+            const placeId = this.getAttribute("data-place");
+            const year = document.querySelector(".year-link.active")?.getAttribute("data-year");
+
+            if (this.classList.contains("active")) {
+                fetch("<?php echo admin_url('admin-ajax.php'); ?>", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams({
+                        action: "filter_events_by_place",
+                        place_id: placeId,
+                        year: year
+                    })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("event-list").innerHTML = data;
+
+                    // Scroll to the place heading after the events load
+                    const placeHeading = document.getElementById(`place-${placeId}`);
+                    if (placeHeading) {
+                        placeHeading.scrollIntoView({ behavior: "smooth" });
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+            } else {
+                document.getElementById("event-list").innerHTML = "";
+            }
+        });
+    });
 }
 
-body {
-  font-family: "Roboto", sans-serif; /* Unified font style */
-  background-color: #a4ac86; /* Light green background */
-  color: #1f2518; /* Dark green text */
-  margin: 0;
-  padding: 0;
-}
+   
 
-body.historia-page #page {
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff; /* White background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-/* Filter styling */
-.year-filter,
-#place-list {
-  margin: 20px 0; /* Vertical spacing between filters */
-  padding: 15px; /* Increased padding for larger block size */
-  border: 2px solid #5a6142; /* Styled border from style guide */
-  border-radius: 8px;
-  background-color: #f8f8f2; /* Light background */
-}
-
-.year-filter h3,
-#place-list h3 {
-  font-size: 1rem; /* Slightly smaller headers */
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 20px; /* Increased bottom margin for separation */
-  color: #5a6142; /* Softer green */
-  font-weight: 600;
-}
-
-.year-filter ul,
-#place-list ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  gap: 20px; /* Increased gap for better vertical spacing */
-}
-
-.year-filter a,
-#place-list a {
-  font-size: 0.85rem; /* Compact font size */
-  font-weight: bold;
-  text-decoration: none;
-  padding: 6px 10px; /* Adjusted padding for smaller filters */
-  border-radius: 15px;
-  background-color: #e2c275; /* Gold buttons */
-  color: #1f2518; /* Dark text for contrast */
-}
-
-.year-filter a.active,
-#place-list a.active {
-  background-color: #1f2518; /* Dark green for active state */
-  color: #ffffff;
-}
-
-.year-filter a:hover,
-#place-list a:hover {
-  background-color: #a4ac86; /* Light green for hover effect */
-  color: #1f2518;
-}
-
-/* Table styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  font-size: 0.85rem; /* Compact font size */
-}
-
-thead th {
-  background-color: #e2c275; /* Gold background */
-  color: #1f2518; /* Dark green text */
-  font-family: "Roboto", sans-serif; /* Ensure consistent font */
-  text-align: left;
-  padding: 6px; /* Compact padding */
-  border-bottom: 2px solid #5a6142; /* Styled green border */
-}
-
-tbody tr:nth-child(odd) {
-  background-color: #f0f0e8; /* Subtle light green-gray for zebra stripes */
-}
-
-tbody tr:nth-child(even) {
-  background-color: #ffffff; /* White for alternate rows */
-}
-
-tbody tr:hover {
-  background-color: #c7d0ae; /* Less bright hover color */
-  color: #1f2518; /* Dark green text for hover */
-}
-
-td {
-  padding: 6px; /* Reduced padding for table cells */
-  border-bottom: 1px solid #d4d4d4; /* Light gray for row separation */
-}
-
-/* Section headers for tables */
-#event-list h2 {
-  font-family: "Roboto", sans-serif; /* Consistent font */
-  color: #1f2518; /* Dark green */
-  background-color: #f8f8f2; /* Light background */
-  padding: 10px;
-  border: 2px solid #5a6142; /* Styled green border */
-  border-radius: 8px;
-  margin-top: 15px;
-  margin-bottom: 20px; /* Separates from filters */
-  font-size: 1.25rem;
-  text-align: center;
-}
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-  #page {
-    padding: 10px;
-  }
-
-  .year-filter ul,
-  #place-list ul {
-    flex-direction: column;
-    gap: 12px; /* Adjusted gap for smaller screens */
-  }
-
-  .year-filter a,
-  #place-list a {
-    font-size: 0.8rem;
-    padding: 5px 8px;
-  }
-
-  table {
-    font-size: 0.8rem;
-  }
-}
-
-.event_listing-template-default {
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #a4ac86;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.event_listing-template-default .post {
-  background-color: #f0f1ec;
-  padding: 20px;
-  border: #1f2518 1px solid;
-  border-radius: 10px;
-}
-.event_listing-template-default .post h2 a {
-  text-decoration: none;
-}
-.event_listing-template-default .post .date-category {
-  padding: 10px;
-  color: red;
-}
-.event_listing-template-default:last-child {
-  margin-bottom: 0;
-  font-size: 1.1rem;
-
-}
+</script>
+<?php get_footer(); ?>
