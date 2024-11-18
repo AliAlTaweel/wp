@@ -9,8 +9,8 @@ function register_taxonomies() {
             'label' => __('Place'),
             'rewrite' => array('slug' => 'custom-category'),
             'hierarchical' => true,
-            'show_ui' => false, // Show in the WordPress admin UI
-            'show_in_menu' => false, // Show in admin menu
+            'show_ui' => true, // Show in the WordPress admin UI
+            'show_in_menu' => true, // Show in admin menu
             'show_in_rest' => true, // Enable for block editor if using
         )
     );
@@ -34,7 +34,6 @@ function register_taxonomies() {
 }
 add_action('init', 'register_taxonomies');
 
-
 function save_event_place($post_id) {
     // Check if this is an 'event_listing' post type
     if (get_post_type($post_id) !== 'event_listing') {
@@ -46,27 +45,18 @@ function save_event_place($post_id) {
         return;
     }
 
-    // Check if the place is being set in the form (assuming you have a custom field or a select box for place)
+    // Check if the places are being set in the form (assuming you have checkboxes or clickable items)
     if (isset($_POST['event_place'])) {
-        $place_id = intval($_POST['event_place']);
+        // Save the selected places as an array
+        $places = array_map('intval', $_POST['event_place']);
         
-        // Use wp_set_object_terms to associate the event with the selected place
-        wp_set_object_terms($post_id, $place_id, 'Place');
+        // Use wp_set_object_terms to associate the event with the selected places
+        wp_set_object_terms($post_id, $places, 'Place');
     }
 }
 add_action('save_post', 'save_event_place');
 
-function add_event_place_meta_box() {
-    add_meta_box(
-        'event_place', 
-        __('Place'), 
-        'event_place_meta_box_callback', 
-        'event_listing', 
-        'side', 
-        'default'
-    );
-}
-add_action('add_meta_boxes', 'add_event_place_meta_box');
+
 
 function event_place_meta_box_callback($post) {
     // Get all the available places
@@ -76,20 +66,31 @@ function event_place_meta_box_callback($post) {
         'hide_empty' => false,
     ));
     
-    // Get the current place assigned to this event
-    $selected_place = wp_get_object_terms($post->ID, 'Place');
-    $selected_place_id = !empty($selected_place) ? $selected_place[0]->term_id : '';
+    // Get the current places assigned to this event
+    $selected_places = wp_get_object_terms($post->ID, 'Place');
+    $selected_place_ids = !empty($selected_places) ? wp_list_pluck($selected_places, 'term_id') : [];
 
-    // Display the select box
-    echo '<select name="event_place" id="event_place">';
-    echo '<option value="">Select Place</option>';
+    // Display the clickable list (checkboxes)
+    echo '<ul>';
     foreach ($places as $place) {
-        echo '<option value="' . esc_attr($place->term_id) . '" ' . selected($selected_place_id, $place->term_id, false) . '>';
+        echo '<li>';
+        echo '<label>';
+        echo '<input type="checkbox" name="event_place[]" value="' . esc_attr($place->term_id) . '" ' . (in_array($place->term_id, $selected_place_ids) ? 'checked' : '') . '>';
         echo esc_html($place->name);
-        echo '</option>';
+        echo '</label>';
+        echo '</li>';
     }
-    echo '</select>';
+    echo '</ul>';
 }
+function change_add_new_category_text($translated_text, $text, $domain) {
+    if ($domain === 'default' && $text === 'Add new category') {
+        $translated_text = 'Add New Place'; // Change to your desired text
+    }
+    return $translated_text;
+}
+add_filter('gettext', 'change_add_new_category_text', 10, 3);
+
+
 
 // ================ Taxonomies Ends ==================
 
@@ -100,8 +101,8 @@ function theme_register_menus() {
 }
 add_action('init', 'theme_register_menus');
 
-// ========= handle AJAX =================
-// Add AJAX action for logged-in and guest users
+// =============================================
+
 
 
 // ========= To force wordpress to take last version of style.css ==========
@@ -109,23 +110,24 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style('main-styles', get_stylesheet_uri(), array(), time());
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
-// ============================    ==========================
+// ======================================================
 
 
 
-//===========================
+//===========================================================================
 // Modify the filter_events_by_place function to handle events by place
+
 function filter_events_by_place() {
     $selected_year = isset($_POST['year']) ? intval($_POST['year']) : null;
-
+    
     // Fetch all places
     $places = get_terms(array(
         'taxonomy' => 'Place',
         'hide_empty' => false,
     ));
-
+    
     ob_start();
-
+    
     // Loop through each place and get events for each one
     foreach ($places as $place) {
         // Display the place name as a heading with a unique ID
@@ -160,48 +162,9 @@ function filter_events_by_place() {
 
         $query = new WP_Query($args);
 
-        // Display events table for each place
-        echo '<table class="event-table">';
-        echo '<thead>';
-        echo '<tr>';
-        echo '<th>Tapahtumat</th>';
-        echo '<th>Kuvaus</th>';
-        echo '<th>Alku Päivä</th>';
-        echo '<th>Loppu Päivä</th>';
-        echo '<th>Vastuulliset</th>';
-        echo '<th>Mentor</th>';
-        echo '</tr>';
-        echo '</thead>';
-        echo '<tbody>';
+        // Use the separate function to generate the table
+        echo generate_event_table($query);
 
-        if ($query->have_posts()) {
-            while ($query->have_posts()) {
-                $query->the_post();
-
-                $start_date = get_post_meta(get_the_ID(),  '_event_start_date', true);
-                $end_date = get_post_meta(get_the_ID(),  '_event_end_date', true);
-                $formatted_start_date = date('d.m.Y', strtotime($start_date));
-                $formatted_end_date = date('d.m.Y', strtotime($end_date));
-
-                $responsible = get_post_meta(get_the_ID(), '_responsible_name', true);
-                $organizer = get_post_meta(get_the_ID(), '_organizer_name', true);
-                $details = get_the_content();
-
-                echo '<tr>';
-                echo '<td>' . esc_html(get_the_title()) . '</td>';
-                echo '<td>' . wp_trim_words(esc_html($details), 20, '...') . '</td>';
-                echo '<td>' . esc_html($formatted_start_date) . '</td>';
-                echo '<td>' . esc_html($formatted_end_date) . '</td>';
-                echo '<td>' . esc_html($responsible) . '</td>';
-                echo '<td>' . esc_html($organizer) . '</td>';
-                echo '</tr>';
-            }
-        } else {
-            echo '<tr><td colspan="7">No events found for this place.</td></tr>';
-        }
-
-        echo '</tbody>';
-        echo '</table>';
         wp_reset_postdata();
     }
 
@@ -209,33 +172,29 @@ function filter_events_by_place() {
     wp_die();
 }
 
-// =================  ==================
-
 function filter_events(): void {
     $selected_year = isset($_POST['year']) ? intval($_POST['year']) : null;
     $selected_place_id = isset($_POST['place_id']) ? intval($_POST['place_id']) : null;
 
     $args = array(
-        'post_type' => 'event_listing',  // Correct post type
+        'post_type' => 'event_listing',
         'posts_per_page' => -1,
         'orderby' => 'meta_value_num',
         'meta_key' => '_event_start_date',
         'order' => 'ASC',
     );
-
-    // Filter by year if a year is specified
+    
     if ($selected_year) {
         $args['meta_query'] = array(
             array(
                 'key' => '_event_start_date',
                 'value' => array($selected_year . '-01-01', $selected_year . '-12-31'),
                 'compare' => 'BETWEEN',
-                'type' => 'DATE'
+                'type' => 'DATE',
             )
         );
     }
-
-    // Filter by place if a specific place is selected
+    
     if ($selected_place_id) {
         $args['tax_query'] = array(
             array(
@@ -245,26 +204,20 @@ function filter_events(): void {
             ),
         );
     }
-
+    
     $query = new WP_Query($args);
     $events_by_place = [];
 
-    // Group events by their associated places
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
             $place_terms = get_the_terms(get_the_ID(), 'Place');
 
-            if ($place_terms && !is_wp_error($place_terms)) {
+            if (!$place_terms || is_wp_error($place_terms)) {
+                $events_by_place['Ei paikkaa'][] = get_the_ID();
+            } else {
                 foreach ($place_terms as $place) {
-                    $events_by_place[$place->name][] = array(
-                        'title' => get_the_title(),
-                        'details' => wp_trim_words(get_the_content(), 20, '...'),
-                        'start_date' => date('d.m.Y', strtotime(get_post_meta(get_the_ID(), '_event_start_date', true))),
-                        'end_date' => date('d.m.Y', strtotime(get_post_meta(get_the_ID(), '_event_end_date', true))),
-                        'responsible' => get_post_meta(get_the_ID(), '_responsible_name', true),
-                        'organizer' => get_post_meta(get_the_ID(), '_organizer_name', true)
-                    );
+                    $events_by_place[$place->name][] = get_the_ID();
                 }
             }
         }
@@ -273,61 +226,97 @@ function filter_events(): void {
 
     ob_start();
 
-    // Output events grouped by place in a table format
     if (!empty($events_by_place)) {
-        foreach ($events_by_place as $place_name => $events) {
+        foreach ($events_by_place as $place_name => $event_ids) {
             echo '<h2>' . esc_html($place_name) . '</h2>';
-            echo '<table class="event-table">';
-            echo '<thead>';
-            echo '<tr>';
-            echo '<th>Tapahtuma</th>';
-            echo '<th>Kuvaus</th>';
-            echo '<th>Alku Päivä</th>';
-            echo '<th>Loppu Päivä</th>';
-            echo '<th>Vastuulliset</th>';
-            echo '<th>Mentor</th>';
-            echo '</tr>';
-            echo '</thead>';
-            echo '<tbody>';
 
-            foreach ($events as $event) {
-                echo '<tr>';
-                echo '<td>' . esc_html($event['title']) . '</td>';
-                echo '<td>' . esc_html($event['details']) . '</td>';
-                echo '<td>' . esc_html($event['start_date']) . '</td>';
-                echo '<td>' . esc_html($event['end_date']) . '</td>';
-                echo '<td>' . esc_html($event['responsible']) . '</td>';
-                echo '<td>' . esc_html($event['organizer']) . '</td>';
-                echo '</tr>';
-            }
+            $place_query_args = array(
+                'post_type' => 'event_listing',
+                'post__in' => $event_ids,
+                'orderby' => 'meta_value_num',
+                'meta_key' => '_event_start_date',
+                'order' => 'ASC',
+            );
 
-            echo '</tbody>';
-            echo '</table>';
+            $place_query = new WP_Query($place_query_args);
+            echo generate_event_table($place_query);
+            wp_reset_postdata();
         }
     } else {
-        echo '<p>No events found for this selection.</p>';
+        echo '<p>Tälle vuodelle ei löytynyt tapahtumia.</p>';
     }
-
-    // Generate the list of places for the sidebar
+    
     $places = get_terms(array(
         'taxonomy' => 'Place',
         'hide_empty' => false,
     ));
 
-    $places_output = '<h3>Paikkat:</h3><ul>';
+    $places_output = '<ul>';
     foreach ($places as $place) {
         $places_output .= '<li><a href="#" class="place-link" data-place="'
             . esc_attr($place->term_id) . '">' . esc_html($place->name) . '</a></li>';
     }
     $places_output .= '</ul>';
 
-    // Send the output as JSON
     wp_send_json(array(
         'events' => ob_get_clean(),
         'places' => $places_output,
     ));
-
+    
     wp_die();
+}
+
+function generate_event_table($query) {
+    ob_start();
+    
+    echo '<table class="event-table">';
+    echo '<thead>';
+    echo '<tr>';
+    echo '<th>Tapahtuma</th>';
+    echo '<th>Kuvaus</th>';
+    echo '<th>Alku Päivä</th>';
+    echo '<th>Loppu Päivä</th>';
+    echo '<th>Vastuulliset</th>';
+    echo '<th>Mentor</th>';
+    echo '</tr>';
+    echo '</thead>';
+    echo '<tbody>';
+    
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            
+            $start_date = get_post_meta(get_the_ID(), '_event_start_date', true);
+            $end_date = get_post_meta(get_the_ID(), '_event_end_date', true);
+
+            $formatted_start_date = ($start_date && strtotime($start_date))
+                ? date('d.m.Y', strtotime($start_date))
+                : '-';
+            $formatted_end_date = ($end_date && strtotime($end_date))
+                ? date('d.m.Y', strtotime($end_date))
+                : '-';
+
+            $responsible = get_post_meta(get_the_ID(), '_responsible_name', true);
+            $organizer = get_post_meta(get_the_ID(), '_organizer_name', true);
+            $details = wp_trim_words(get_the_content(), 20, '...');
+
+            echo '<tr>';
+            echo '<td><a href="' . esc_url(get_permalink()) . '" target="_blank">' . esc_html(get_the_title()) . '</a></td>';
+            echo '<td>' . esc_html($details) . '</td>';
+            echo '<td>' . esc_html($formatted_start_date) . '</td>';
+            echo '<td>' . esc_html($formatted_end_date) . '</td>';
+            echo '<td>' . esc_html($responsible) . '</td>';
+            echo '<td>' . esc_html($organizer) . '</td>';
+            echo '</tr>';
+        }
+    } else {
+        echo '<tr><td colspan="6">Tapahtumia ei löytynyt.</td></tr>';
+    }
+
+    echo '</tbody>';
+    echo '</table>';
+
+    return ob_get_clean();
 }
 
 add_action('wp_ajax_filter_events', 'filter_events');
@@ -336,6 +325,11 @@ add_action('wp_ajax_nopriv_filter_events', 'filter_events');
 add_action('wp_ajax_filter_events_by_place', 'filter_events_by_place');
 add_action('wp_ajax_nopriv_filter_events_by_place', 'filter_events_by_place');
 
-
-
-
+function add_historia_body_class($classes) {
+    if (is_page('historia-page')) { // Use the slug of the page or its ID (e.g., is_page(123))
+        $classes[] = 'historia-page';
+    }
+    return $classes;
+}
+add_filter('body_class', 'add_historia_body_class');
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
